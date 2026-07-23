@@ -1,11 +1,11 @@
-import { Activity, Apple, ArrowDown, ArrowRight, ArrowUp, ArrowUpRight, Check, CircleDot, Heart, HeartPulse, MessageCircle, Phone, Salad, Search, Sparkles, Sprout, Sun, TrendingUp, Utensils } from "lucide-react";
+import { Apple, ArrowDown, ArrowRight, ArrowUp, ArrowUpRight, Check, ClipboardCheck, Ear, Heart, HeartPulse, Leaf, MessageCircle, PhoneCall, Scale, ShieldCheck, Sparkles, Sprout, Sun, TrendingUp, Waves } from "lucide-react";
 
 const whatsapp = "https://wa.me/918003924522?text=Hello%20Vaishali%2C%20I%20would%20like%20to%20book%20a%20nutrition%20consultation.";
 
 const services = [
-  { icon: Activity, title: "Sustainable Weight Care", text: "Build a calmer, healthier relationship with food while working towards lasting weight goals.", tone: "green" },
+  { icon: Scale, title: "Sustainable Weight Care", text: "Build a calmer, healthier relationship with food while working towards lasting weight goals.", tone: "green" },
   { icon: HeartPulse, title: "PCOS & Metabolic Health", text: "Practical nutrition support for PCOS, thyroid health, insulin resistance and blood sugar.", tone: "peach" },
-  { icon: Salad, title: "Gut Health", text: "A thoughtful food-first approach for bloating, acidity, irregular digestion and everyday comfort.", tone: "sand" },
+  { icon: Leaf, title: "Gut Health", text: "A thoughtful food-first approach for bloating, acidity, irregular digestion and everyday comfort.", tone: "sand" },
   { icon: Apple, title: "Everyday Nutrition", text: "Simple meal systems for busy professionals, families, prenatal care and healthy ageing.", tone: "cream" },
 ];
 
@@ -27,7 +27,7 @@ export default function Home() {
         <p>Personalised nutrition that fits Indian food, busy schedules and real life—without crash diets, guilt or confusing rules.</p>
         <div className="hero-cta">
           <a className="cta cta-dark" href={whatsapp} target="_blank" rel="noreferrer">Chat on WhatsApp <b><ArrowUpRight size={16}/></b></a>
-          <a className="cta cta-light" href="tel:+918003924522">Call +91 80039 24522 <b><ArrowRight size={16}/></b></a>
+          <a className="cta cta-light" href="tel:+918003924522">Call Vaishali directly <b><PhoneCall size={16}/></b></a>
         </div>
         <div className="micro-trust"><span><Check size={11}/> Personal plans</span><span><Check size={11}/> Indian food friendly</span><span><Check size={11}/> Ongoing support</span></div>
       </div>
@@ -43,7 +43,7 @@ export default function Home() {
     <section className="intro section" id="approach">
       <div className="kicker">01 / A DIFFERENT APPROACH</div>
       <div className="intro-grid"><h2>Nutrition that works <em>with your life,</em> not against it.</h2><div><p>Vaishali turns complex nutrition advice into realistic everyday choices. Your plan begins with your health, your food culture and your routine—then grows with you.</p><a href="#journey">How it works <span><ArrowDown size={14}/></span></a></div></div>
-      <div className="values-grid"><article><span><Search size={18}/></span><h3>Listen first</h3><p>Your story matters more than a generic food chart.</p><i>Personal</i></article><article><span><Utensils size={18}/></span><h3>Keep it practical</h3><p>Familiar meals, flexible choices and realistic routines.</p><i>Flexible</i></article><article><span><Sparkles size={18}/></span><h3>Build confidence</h3><p>Understand your body and make decisions without fear.</p><i>Lasting</i></article></div>
+      <div className="values-grid"><article><span><Ear size={18}/></span><h3>Listen first</h3><p>Your story matters more than a generic food chart.</p><i>Personal</i></article><article><span><ClipboardCheck size={18}/></span><h3>Keep it practical</h3><p>Familiar meals, flexible choices and realistic routines.</p><i>Flexible</i></article><article><span><ShieldCheck size={18}/></span><h3>Build confidence</h3><p>Understand your body and make decisions without fear.</p><i>Lasting</i></article></div>
     </section>
 
     <section className="meet-vaishali section" aria-labelledby="meet-vaishali-title">
@@ -80,7 +80,7 @@ export default function Home() {
     <section className="difference section">
       <div className="difference-card">
         <div className="difference-copy"><div className="kicker light">MORE THAN A MEAL PLAN</div><h2>Imagine feeling<br/><em>better in your day.</em></h2><p>The right nutrition plan should change how life feels—not just what appears on your plate.</p></div>
-        <div className="outcome-cloud"><span><i><Sun size={15}/></i> Steadier energy</span><span><i><Heart size={15}/></i> Food confidence</span><span><i><CircleDot size={15}/></i> Calmer digestion</span><span><i><TrendingUp size={15}/></i> Sustainable habits</span><span><i><Sprout size={15}/></i> Better routines</span></div>
+        <div className="outcome-cloud"><span><i><Sun size={15}/></i> Steadier energy</span><span><i><Heart size={15}/></i> Food confidence</span><span><i><Waves size={15}/></i> Calmer digestion</span><span><i><TrendingUp size={15}/></i> Sustainable habits</span><span><i><Sprout size={15}/></i> Better routines</span></div>
       </div>
     </section>
 
@@ -93,7 +93,7 @@ export default function Home() {
 
     <section className="contact-band section">
       <div><div className="kicker">TAKE THE FIRST STEP</div><h2>Let’s make healthy eating<br/><em>feel simple again.</em></h2></div>
-      <div className="contact-options"><a href="tel:+918003924522"><span><Phone size={18}/></span><div><small>CALL DIRECTLY</small><b>+91 80039 24522</b></div><i><ArrowRight size={17}/></i></a><a className="wa" href={whatsapp} target="_blank" rel="noreferrer"><span><MessageCircle size={18}/></span><div><small>WHATSAPP</small><b>Start a conversation</b></div><i><ArrowUpRight size={17}/></i></a></div>
+      <div className="contact-options"><a href="tel:+918003924522"><span><PhoneCall size={18}/></span><div><small>CALL DIRECTLY</small><b>+91 80039 24522</b></div><i><ArrowRight size={17}/></i></a><a className="wa" href={whatsapp} target="_blank" rel="noreferrer"><span><MessageCircle size={18}/></span><div><small>WHATSAPP</small><b>Start a conversation</b></div><i><ArrowUpRight size={17}/></i></a></div>
     </section>
 
     <section className="feedback section" id="feedback" aria-labelledby="feedback-title">
@@ -109,9 +109,9 @@ export default function Home() {
       </div>
     </section>
 
-    <section className="faq-new section" id="faq"><div><div className="kicker">05 / FAQs</div><h2>A few things<br/>you may wonder.</h2></div><div className="faq-list"><details open><summary>Are consultations available online?</summary><p>Yes. You can connect privately from wherever you are, with follow-up guidance designed for your routine.</p></details><details><summary>Will I need to stop eating my favourite foods?</summary><p>No. The plan uses familiar foods and flexible portions so it is realistic enough to continue.</p></details><details><summary>How do I book my first consultation?</summary><p>Call +91 80039 24522 or send a WhatsApp message. Vaishali will help you choose the most suitable next step.</p></details></div></section>
+    <section className="faq-new section" id="faq"><div><div className="kicker">05 / FAQs</div><h2>A few things<br/>you may wonder.</h2></div><div className="faq-list"><details open><summary>Are consultations available online?</summary><p>Yes. You can connect privately from wherever you are, with follow-up guidance designed for your routine.</p></details><details><summary>Will I need to stop eating my favourite foods?</summary><p>No. The plan uses familiar foods and flexible portions so it is realistic enough to continue.</p></details><details><summary>How do I book my first consultation?</summary><p>Use the call or WhatsApp option in the contact section. Vaishali will help you choose the most suitable next step.</p></details></div></section>
 
-    <footer><div className="footer-main"><a className="logo footer-logo" href="#home"><span>V</span><div><b>NOURISH</b><small>by Vaishali</small></div></a><p>Personal nutrition care for real life.</p><div className="footer-links"><a href="tel:+918003924522">+91 80039 24522</a><a href={whatsapp} target="_blank" rel="noreferrer">WhatsApp <ArrowUpRight size={12}/></a></div></div><div className="footer-bottom"><span>© 2026 Nourish by Vaishali</span><a href="#home">Back to top <ArrowUp size={12}/></a></div></footer>
+    <footer><div className="footer-main"><a className="logo footer-logo" href="#home"><span>V</span><div><b>NOURISH</b><small>by Vaishali</small></div></a><p>Personal nutrition care for real life.</p><div className="footer-links"><a href="#services">Explore services</a><a href={whatsapp} target="_blank" rel="noreferrer">WhatsApp <ArrowUpRight size={12}/></a></div></div><div className="footer-bottom"><span>© 2026 Nourish by Vaishali</span><a href="#home">Back to top <ArrowUp size={12}/></a></div></footer>
     <a className="float-wa" href={whatsapp} target="_blank" rel="noreferrer" aria-label="Chat with Vaishali on WhatsApp"><span><MessageCircle size={17}/></span><b>WhatsApp</b></a>
   </main>
 }

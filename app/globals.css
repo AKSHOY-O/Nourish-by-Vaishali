@@ -98,3 +98,92 @@ footer{background:#111c15;color:#e9efe9;padding:55px max(24px,calc((100% - 1160p
     .difference-card,.journey-copy,.journey li,.contact-band>*,.feedback-copy,.feedback-form,.faq-new>*{animation-range:entry 0% cover 18%}
   }
 }
+
+/* Mobile-first visual and picture polish */
+.service-top>span,.values-grid article>span,.contact-options>a>span,.meet-badge,.photo-mosaic figcaption span{box-shadow:inset 0 0 0 1px #ffffff66,0 8px 22px #173d2c12}.service-top svg,.values-grid svg,.contact-options svg,.outcome-cloud svg,.meet-badge svg{stroke-linecap:round;stroke-linejoin:round}.food-card img,.meet-photo img,.photo-mosaic img{scale:1.01;transform-origin:center;will-change:scale,filter}.photo-mosaic figure:nth-child(2) img{animation-delay:-3.1s!important}.photo-mosaic figure:nth-child(4) img{animation-delay:-5.2s!important}
+
+@media(hover:hover){
+  .services-bento article:hover .service-top>span,.values-grid article:hover>span svg,.contact-options>a:hover>span svg,.float-wa:hover svg{transform:translateY(-2px) scale(1.06);box-shadow:0 10px 24px #173d2c20}
+}
+
+@media(prefers-reduced-motion:no-preference){
+  .food-card img{animation:pictureLiving 11s ease-in-out infinite}
+  .meet-photo img{animation:pictureLiving 13s -4s ease-in-out infinite}
+  .photo-mosaic img{animation:pictureLiving 12s -1.5s ease-in-out infinite}
+  @keyframes pictureLiving{0%,100%{scale:1.01;filter:saturate(1) contrast(1)}50%{scale:1.055;filter:saturate(1.08) contrast(1.02)}}
+}
+
+@media(max-width:650px){
+  .nav-wrap,.new-hero,.ticker>div,.section,.journey-inner{width:calc(100% - 24px)}
+  .site-header{background:#f9f8f3f5}
+  .nav-wrap{min-height:66px}
+  .logo b{font-size:11px}.logo small{font-size:9px}
+  .new-hero{margin-top:10px;padding:30px 18px 20px;gap:30px;border-radius:22px}
+  .new-hero h1{font-size:clamp(38px,11.6vw,48px);margin:20px 0;letter-spacing:-.05em}
+  .hero-main>p{font-size:14px;line-height:1.65}
+  .hero-cta{gap:9px;margin:23px 0 20px}
+  .hero-cta .cta{padding:14px 16px}
+  .micro-trust{display:flex;flex-wrap:wrap;gap:8px}
+  .micro-trust span{background:#ffffff9c;border:1px solid #fff;padding:7px 9px;border-radius:20px}
+  .hero-bento{height:auto;display:grid;grid-template-columns:1fr 1fr;grid-template-rows:285px 138px;gap:9px}
+  .food-card{grid-column:1/3;grid-row:1;border-radius:42px 16px 16px 16px}
+  .metric-card,.plan-card{min-height:0;height:138px;padding:17px;border-radius:16px}
+  .metric-card strong{font-size:19px}.plan-card{display:block}.plan-card>span{width:30px;height:30px;margin-bottom:11px}.plan-card small{line-height:1.4}
+  .ticker>div{min-height:54px;font-size:8px}
+  .section{padding-block:58px}
+  .intro-grid,.section-top,.visual-heading,.contact-band,.faq-new{gap:25px}
+  .intro h2,.section-top h2,.visual-heading h2,.difference h2,.journey h2,.contact-band h2,.feedback-copy h2,.faq-new h2{font-size:clamp(33px,9.8vw,41px);line-height:1.08}
+  .values-grid{margin-top:34px;gap:9px}
+  .values-grid article{padding:22px;border-radius:16px}
+  .values-grid h3{margin:20px 0 7px}
+  .meet-card{border-radius:20px}
+  .meet-photo{aspect-ratio:4/4.75}
+  .meet-photo img{object-position:center 42%}
+  .meet-content{padding:34px 20px}
+  .meet-content h2{font-size:clamp(34px,10vw,41px);margin:19px 0}
+  .meet-content>p{font-size:13px}
+  .meet-points span{width:auto}
+  .services-bento{gap:9px}
+  .services-bento article{min-height:245px;padding:23px;border-radius:18px}
+  .service-top>span{width:46px;height:46px;border-radius:14px}
+  .services-bento h3{font-size:22px}
+  .photo-mosaic{display:flex;grid-template:none;gap:11px;overflow-x:auto;overscroll-behavior-inline:contain;scroll-snap-type:x mandatory;padding:0 10vw 12px 0;scrollbar-width:none}
+  .photo-mosaic::-webkit-scrollbar{display:none}
+  .photo-mosaic>*{flex:0 0 min(82vw,345px);height:330px;scroll-snap-align:start}
+  .photo-mosaic .photo-quote{height:330px;padding:25px}
+  .photo-mosaic figure{border-radius:18px}
+  .visual-heading{margin-bottom:28px}
+  .difference-card{padding:32px 19px;gap:25px}
+  .outcome-cloud span{flex:1 1 100%;min-height:42px}
+  .journey{padding-block:60px}
+  .journey-inner{gap:25px}
+  .journey li{padding:17px 0}
+  .contact-band{padding-block:58px}
+  .contact-options{gap:8px}
+  .contact-options>a{min-height:70px;padding:12px;border-radius:14px}
+  .feedback-shell{padding:32px 18px;border-radius:20px;gap:27px}
+  .feedback-form{padding:18px;border-radius:17px}
+  .feedback-trust{gap:7px}
+  .faq-new{padding-top:12px}
+  footer{padding-top:44px}
+  .footer-main{gap:24px}
+  .footer-main>p{font-size:14px}
+  .float-wa{right:10px;bottom:max(10px,env(safe-area-inset-bottom));min-width:50px;min-height:50px}
+}
+
+@media(max-width:380px){
+  .new-hero h1{font-size:37px}
+  .hero-bento{grid-template-rows:250px 135px}
+  .metric-card,.plan-card{height:135px;padding:15px}
+  .plan-card small{font-size:8px}
+  .photo-mosaic>*{flex-basis:86vw;height:300px}
+  .photo-mosaic .photo-quote{height:300px}
+}
+
+@media(max-width:650px) and (prefers-reduced-motion:no-preference){
+  @supports(animation-timeline:view()){
+    .intro-grid,.values-grid article,.meet-card,.section-top,.services-bento article,.visual-heading,.photo-mosaic>*,
+    .difference-card,.journey-copy,.journey li,.contact-band>*,.feedback-copy,.feedback-form,.faq-new>*{animation-name:mobileReveal;animation-range:entry 0% cover 15%}
+    @keyframes mobileReveal{from{opacity:.35;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
+  }
+}
