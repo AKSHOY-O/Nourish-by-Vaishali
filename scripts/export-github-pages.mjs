@@ -2,6 +2,8 @@ import { spawn } from "node:child_process";
 import { cp, mkdir, rm, writeFile } from "node:fs/promises";
 
 const basePath = "/Nourish-by-Vaishali/";
+const scrollResetScript =
+  '<script>(function(){try{history.scrollRestoration="manual";var entry=performance.getEntriesByType&&performance.getEntriesByType("navigation")[0];var reloaded=entry?entry.type==="reload":performance.navigation&&performance.navigation.type===1;if(reloaded){if(location.hash)history.replaceState(null,"",location.pathname+location.search);var top=function(){window.scrollTo(0,0)};top();document.addEventListener("DOMContentLoaded",top,{once:true});window.addEventListener("load",function(){top();requestAnimationFrame(top);setTimeout(top,0)},{once:true})}}catch(e){}})();</script>';
 const server = spawn("pnpm", ["start"], {
   env: { ...process.env, NODE_ENV: "production" },
   stdio: "ignore",
@@ -32,7 +34,8 @@ try {
   const staticHtml = renderedHtml
     .replace(/<script\b[^>]*>[\s\S]*?<\/script>/gi, "")
     .replace(/<link\b[^>]*rel="modulepreload"[^>]*>/gi, "")
-    .replace(/(href|src)="\/(?!\/)/g, `$1="${basePath}`);
+    .replace(/(href|src)="\/(?!\/)/g, `$1="${basePath}`)
+    .replace("</head>", `${scrollResetScript}</head>`);
 
   await writeFile("github-pages-dist/index.html", staticHtml);
   await writeFile("github-pages-dist/.nojekyll", "");
