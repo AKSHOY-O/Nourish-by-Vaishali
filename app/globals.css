@@ -214,3 +214,22 @@ footer{background:#111c15;color:#e9efe9;padding:55px max(24px,calc((100% - 1160p
   .booking-contact>a{min-height:76px;padding:14px}
   .booking-contact b{font-size:11px}
 }
+
+/* Animated real-life hero picture trio */
+.hero-picture-card{position:relative;overflow:hidden;padding:0;isolation:isolate}.hero-picture-card>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;scale:1!important;will-change:transform,filter}.metric-card:after,.plan-card:after{content:"";position:absolute;inset:0;z-index:1;pointer-events:none}.metric-card:after{background:linear-gradient(180deg,#173d2c05 25%,#173d2c73 100%)}.plan-card:after{background:linear-gradient(90deg,#10291dca 0%,#10291d66 62%,transparent 100%)}.hero-card-copy{position:absolute;z-index:2}.metric-card .hero-card-copy{inset:auto 16px 16px;padding:15px;border-radius:15px;background:#ffffffe8;backdrop-filter:blur(9px);box-shadow:0 12px 30px #173d2c1c}.metric-card .hero-card-copy small{display:block;color:var(--leaf);margin-bottom:9px}.metric-card .hero-card-copy strong{display:block;margin:0 0 13px;font-size:21px;color:var(--green)}.plan-card .hero-card-copy{left:17px;right:12px;bottom:16px;color:#fff}.plan-card .hero-card-copy small{display:block;font-size:7px;letter-spacing:.14em;color:var(--lime);margin-bottom:6px}.plan-card .hero-card-copy b{font:600 14px Manrope}.hero-picture-card:nth-child(2) img{transform-origin:top center}.hero-picture-card:nth-child(3) img{transform-origin:center 58%}
+
+@media(prefers-reduced-motion:no-preference){
+  .hero-picture-card>img{animation:heroPictureLife 11s cubic-bezier(.45,0,.55,1) infinite alternate!important}
+  .hero-picture-card:nth-child(2)>img{animation-delay:-3.5s!important;animation-duration:13s!important}
+  .hero-picture-card:nth-child(3)>img{animation-delay:-6s!important;animation-duration:12s!important}
+  @keyframes heroPictureLife{0%{transform:scale(1.02) translate3d(0,0,0);filter:saturate(1)}100%{transform:scale(1.1) translate3d(-1.5%,-1%,0);filter:saturate(1.1) contrast(1.02)}}
+}
+
+@media(max-width:650px){
+  .metric-card .hero-card-copy{inset:auto 10px 10px;padding:11px;border-radius:12px}
+  .metric-card .hero-card-copy small{font-size:7px;margin-bottom:5px}
+  .metric-card .hero-card-copy strong{font-size:16px;line-height:1.05;margin-bottom:8px}
+  .plan-card .hero-card-copy{left:13px;bottom:13px}
+  .plan-card .hero-card-copy b{font-size:12px}
+  .plan-card .hero-card-copy small{font-size:6px}
+}

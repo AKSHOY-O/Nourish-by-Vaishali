@@ -31,9 +31,9 @@ export default function Home() {
         <div className="micro-trust"><span><Check size={11}/> Personal plans</span><span><Check size={11}/> Indian food friendly</span><span><Check size={11}/> Ongoing support</span></div>
       </div>
       <div className="hero-bento">
-        <div className="food-card"><img src="/nourish-hero-premium.png" alt="A colourful balanced Indian-inspired meal"/><span>Eat better,<br/>not less.</span><i className="image-badge">Made for real life</i></div>
-        <div className="metric-card"><small>THE GOAL</small><strong>Feel good<br/>every day.</strong><div className="metric-line"><i></i></div></div>
-        <div className="plan-card"><span>01</span><div><b>Personal roadmap</b><small>Made around your body, routine and preferences.</small></div></div>
+        <div className="food-card hero-picture-card"><img src="/hero-roadmap.jpg" alt="Preparing a colourful healthy meal in a real home kitchen"/><span>Eat better,<br/>not less.</span><i className="image-badge">Made for real life</i></div>
+        <div className="metric-card hero-picture-card"><img src="/hero-goal.jpg" alt="Fresh green ingredients arranged as a balanced nutrition concept"/><div className="hero-card-copy"><small>THE GOAL</small><strong>Feel good<br/>every day.</strong><div className="metric-line"><i></i></div></div></div>
+        <div className="plan-card hero-picture-card"><img src="/nourish-hero-premium.png" alt="A colourful balanced meal representing a personal nutrition roadmap"/><div className="hero-card-copy"><small>MADE AROUND YOU</small><b>Personal roadmap</b></div></div>
       </div>
     </section>
 
