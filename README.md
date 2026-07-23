@@ -10,6 +10,7 @@ A responsive dietitian portfolio website for Vaishali, featuring personalised nu
 - Direct call and WhatsApp actions
 - Accessible semantic page structure
 - GitHub Actions build verification
+- Automatic deployment to GitHub Pages
 
 ## Run locally
 
@@ -28,6 +29,10 @@ Open the local URL shown in the terminal.
 ```bash
 pnpm build
 ```
+
+The GitHub Actions workflow also exports and deploys the site automatically to:
+
+`https://akshoy-o.github.io/Nourish-by-Vaishali/`
 
 ## Main files
 
@@ -58,4 +63,3 @@ git push -u origin main
 ## Contact used on the website
 
 - Phone and WhatsApp: +91 80039 24522
-
