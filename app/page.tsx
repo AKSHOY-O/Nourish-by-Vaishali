@@ -1,4 +1,4 @@
-import { Apple, ArrowDown, ArrowUp, ArrowUpRight, Check, ClipboardCheck, Ear, Heart, HeartPulse, Leaf, MessageCircle, Play, Scale, ShieldCheck, Sprout, Sun, TrendingUp, Waves } from "lucide-react";
+import { Apple, ArrowDown, ArrowRight, ArrowUp, ArrowUpRight, Check, ClipboardCheck, Ear, Heart, HeartPulse, Leaf, MessageCircle, PhoneCall, Play, Scale, ShieldCheck, Sprout, Sun, TrendingUp, Waves } from "lucide-react";
 
 const whatsapp = "https://wa.me/918003924522?text=Hello%20Vaishali%2C%20I%20would%20like%20to%20book%20a%20nutrition%20consultation.";
 
@@ -15,7 +15,7 @@ export default function Home() {
       <div className="nav-wrap">
         <a className="logo" href="#home"><span>V</span><div><b>NOURISH</b><small>by Vaishali</small></div></a>
         <nav aria-label="Main navigation"><a href="#approach">Approach</a><a href="#services">Services</a><a href="#journey">Your journey</a><a href="#feedback">Feedback</a><a href="#faq">FAQs</a></nav>
-        <a className="nav-book" href="#contact">Contact Vaishali <span><ArrowDown size={15}/></span></a>
+        <a className="nav-book" href="#contact">Book a consultation <span><ArrowDown size={15}/></span></a>
       </div>
     </header>
 
@@ -26,7 +26,7 @@ export default function Home() {
         <h1>Good food.<br/><em>Clear guidance.</em><br/>A healthier you.</h1>
         <p>Personalised nutrition that fits Indian food, busy schedules and real life—without crash diets, guilt or confusing rules.</p>
         <div className="hero-cta">
-          <a className="cta cta-dark" href="#contact">See the contact option <b><ArrowDown size={16}/></b></a>
+          <a className="cta cta-dark" href="#contact">Get started <b><ArrowDown size={16}/></b></a>
         </div>
         <div className="micro-trust"><span><Check size={11}/> Personal plans</span><span><Check size={11}/> Indian food friendly</span><span><Check size={11}/> Ongoing support</span></div>
       </div>
@@ -56,14 +56,14 @@ export default function Home() {
           <h2 id="meet-vaishali-title">Guidance that feels<br/><em>personal and possible.</em></h2>
           <p>Vaishali brings warmth, curiosity and practical thinking to every consultation. Her approach starts with listening, respects your food culture and turns healthy choices into routines that fit everyday life.</p>
           <div className="meet-points"><span><Check size={13}/> Judgement-free care</span><span><Check size={13}/> Realistic Indian meals</span><span><Check size={13}/> Clear ongoing support</span></div>
-          <a className="cta cta-white" href="#contact">Meet your next step <b><ArrowDown size={16}/></b></a>
+          <a className="cta cta-white" href="#contact">Start your plan <b><ArrowDown size={16}/></b></a>
         </div>
       </div>
     </section>
 
     <section className="services-new section" id="services">
       <div className="section-top"><div><div className="kicker">02 / HOW I CAN HELP</div><h2>Support for the health<br/>you want to build.</h2></div><p>Every service starts with a detailed conversation and becomes a plan created specifically for you.</p></div>
-      <div className="services-bento">{services.map((service, i)=>{const Icon=service.icon;return <article className={service.tone} key={service.title}><div className="service-top"><span><Icon size={25}/></span><small>0{i+1}</small></div><h3>{service.title}</h3><p>{service.text}</p><a href="#contact">View contact option <b><ArrowDown size={16}/></b></a></article>})}</div>
+      <div className="services-bento">{services.map((service, i)=>{const Icon=service.icon;return <article className={service.tone} key={service.title}><div className="service-top"><span><Icon size={25}/></span><small>0{i+1}</small></div><h3>{service.title}</h3><p>{service.text}</p></article>})}</div>
     </section>
 
     <section className="video-story section" aria-labelledby="video-story-title">
@@ -94,7 +94,7 @@ export default function Home() {
 
     <section className="contact-band section" id="contact">
       <div><div className="kicker">TAKE THE FIRST STEP</div><h2>Let’s make healthy eating<br/><em>feel simple again.</em></h2></div>
-      <div className="contact-options single-contact"><a className="wa" href={whatsapp} target="_blank" rel="noreferrer"><span><MessageCircle size={19}/></span><div><small>ONE SIMPLE CONTACT OPTION</small><b>Chat with Vaishali on WhatsApp</b></div><i><ArrowUpRight size={18}/></i></a></div>
+      <div className="contact-options booking-contact"><a href="tel:+918003924522"><span><PhoneCall size={19}/></span><div><small>CALL DIRECTLY</small><b>+91 80039 24522</b></div><i><ArrowRight size={18}/></i></a><a className="wa" href={whatsapp} target="_blank" rel="noreferrer"><span><MessageCircle size={19}/></span><div><small>WHATSAPP</small><b>Message Vaishali</b></div><i><ArrowUpRight size={18}/></i></a></div>
     </section>
 
     <section className="feedback section" id="feedback" aria-labelledby="feedback-title">
@@ -110,8 +110,8 @@ export default function Home() {
       </div>
     </section>
 
-    <section className="faq-new section" id="faq"><div><div className="kicker">05 / FAQs</div><h2>A few things<br/>you may wonder.</h2></div><div className="faq-list"><details open><summary>Are consultations available online?</summary><p>Yes. You can connect privately from wherever you are, with follow-up guidance designed for your routine.</p></details><details><summary>Will I need to stop eating my favourite foods?</summary><p>No. The plan uses familiar foods and flexible portions so it is realistic enough to continue.</p></details><details><summary>How do I book my first consultation?</summary><p>Use the single WhatsApp option in the contact section. Vaishali will help you choose the most suitable next step.</p></details></div></section>
+    <section className="faq-new section" id="faq"><div><div className="kicker">05 / FAQs</div><h2>A few things<br/>you may wonder.</h2></div><div className="faq-list"><details open><summary>Are consultations available online?</summary><p>Yes. You can connect privately from wherever you are, with follow-up guidance designed for your routine.</p></details><details><summary>Will I need to stop eating my favourite foods?</summary><p>No. The plan uses familiar foods and flexible portions so it is realistic enough to continue.</p></details><details><summary>How do I book my first consultation?</summary><p>Use the call or WhatsApp choice in the booking section. Vaishali will help you choose the most suitable next step.</p></details></div></section>
 
-    <footer><div className="footer-main"><a className="logo footer-logo" href="#home"><span>V</span><div><b>NOURISH</b><small>by Vaishali</small></div></a><p>Personal nutrition care for real life.</p><div className="footer-links"><a href="#services">Explore services</a><a href="#contact">Contact section <ArrowUpRight size={12}/></a></div></div><div className="footer-bottom"><span>© 2026 Nourish by Vaishali</span><a href="#home">Back to top <ArrowUp size={12}/></a></div></footer>
+    <footer><div className="footer-main"><a className="logo footer-logo" href="#home"><span>V</span><div><b>NOURISH</b><small>by Vaishali</small></div></a><p>Personal nutrition care for real life.</p><div className="footer-links"><a href="#services">Explore services</a><a href="#contact">Book consultation <ArrowUpRight size={12}/></a></div></div><div className="footer-bottom"><span>© 2026 Nourish by Vaishali</span><a href="#home">Back to top <ArrowUp size={12}/></a></div></footer>
   </main>
 }
