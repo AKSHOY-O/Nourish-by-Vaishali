@@ -14,7 +14,7 @@ export default function Home() {
     <header className="site-header">
       <div className="nav-wrap">
         <a className="logo" href="#home"><span>V</span><div><b>NOURISH</b><small>by Vaishali</small></div></a>
-        <nav aria-label="Main navigation"><a href="#approach">Approach</a><a href="#services">Services</a><a href="#journey">Your journey</a><a href="#faq">FAQs</a></nav>
+        <nav aria-label="Main navigation"><a href="#approach">Approach</a><a href="#services">Services</a><a href="#journey">Your journey</a><a href="#feedback">Feedback</a><a href="#faq">FAQs</a></nav>
         <a className="nav-book" href={whatsapp} target="_blank" rel="noreferrer">Book a consultation <span><ArrowUpRight size={15}/></span></a>
       </div>
     </header>
@@ -96,7 +96,20 @@ export default function Home() {
       <div className="contact-options"><a href="tel:+918003924522"><span><Phone size={18}/></span><div><small>CALL DIRECTLY</small><b>+91 80039 24522</b></div><i><ArrowRight size={17}/></i></a><a className="wa" href={whatsapp} target="_blank" rel="noreferrer"><span><MessageCircle size={18}/></span><div><small>WHATSAPP</small><b>Start a conversation</b></div><i><ArrowUpRight size={17}/></i></a></div>
     </section>
 
-    <section className="faq-new section" id="faq"><div><div className="kicker">04 / FAQs</div><h2>A few things<br/>you may wonder.</h2></div><div className="faq-list"><details open><summary>Are consultations available online?</summary><p>Yes. You can connect privately from wherever you are, with follow-up guidance designed for your routine.</p></details><details><summary>Will I need to stop eating my favourite foods?</summary><p>No. The plan uses familiar foods and flexible portions so it is realistic enough to continue.</p></details><details><summary>How do I book my first consultation?</summary><p>Call +91 80039 24522 or send a WhatsApp message. Vaishali will help you choose the most suitable next step.</p></details></div></section>
+    <section className="feedback section" id="feedback" aria-labelledby="feedback-title">
+      <div className="feedback-shell">
+        <div className="feedback-copy"><div className="kicker light">04 / COMMUNITY FEEDBACK</div><h2 id="feedback-title">Your experience<br/><em>helps care grow.</em></h2><p>Have a suggestion, question or kind word? Share it directly with Vaishali. Every message is read privately and helps make the experience better.</p><div className="feedback-trust"><span><Check size={13}/> No account needed</span><span><Check size={13}/> Private WhatsApp message</span></div></div>
+        <form className="feedback-form" action="https://api.whatsapp.com/send" method="get" target="_blank">
+          <input type="hidden" name="phone" value="918003924522"/>
+          <label htmlFor="feedback-message">Write your feedback</label>
+          <textarea id="feedback-message" name="text" minLength={10} required placeholder="Hello Vaishali, I would like to share my feedback…"/>
+          <button type="submit">Send feedback on WhatsApp <ArrowUpRight size={17}/></button>
+          <small>Your feedback opens in WhatsApp so you can review it before sending.</small>
+        </form>
+      </div>
+    </section>
+
+    <section className="faq-new section" id="faq"><div><div className="kicker">05 / FAQs</div><h2>A few things<br/>you may wonder.</h2></div><div className="faq-list"><details open><summary>Are consultations available online?</summary><p>Yes. You can connect privately from wherever you are, with follow-up guidance designed for your routine.</p></details><details><summary>Will I need to stop eating my favourite foods?</summary><p>No. The plan uses familiar foods and flexible portions so it is realistic enough to continue.</p></details><details><summary>How do I book my first consultation?</summary><p>Call +91 80039 24522 or send a WhatsApp message. Vaishali will help you choose the most suitable next step.</p></details></div></section>
 
     <footer><div className="footer-main"><a className="logo footer-logo" href="#home"><span>V</span><div><b>NOURISH</b><small>by Vaishali</small></div></a><p>Personal nutrition care for real life.</p><div className="footer-links"><a href="tel:+918003924522">+91 80039 24522</a><a href={whatsapp} target="_blank" rel="noreferrer">WhatsApp <ArrowUpRight size={12}/></a></div></div><div className="footer-bottom"><span>© 2026 Nourish by Vaishali</span><a href="#home">Back to top <ArrowUp size={12}/></a></div></footer>
     <a className="float-wa" href={whatsapp} target="_blank" rel="noreferrer" aria-label="Chat with Vaishali on WhatsApp"><span><MessageCircle size={17}/></span><b>WhatsApp</b></a>

@@ -25,17 +25,17 @@ async function renderPage() {
 
 try {
   const renderedHtml = await renderPage();
-  await rm("pages", { recursive: true, force: true });
-  await mkdir("pages", { recursive: true });
-  await cp("dist/client", "pages", { recursive: true });
+  await rm("github-pages-dist", { recursive: true, force: true });
+  await mkdir("github-pages-dist", { recursive: true });
+  await cp("dist/client", "github-pages-dist", { recursive: true });
 
   const staticHtml = renderedHtml
     .replace(/<script\b[^>]*>[\s\S]*?<\/script>/gi, "")
     .replace(/<link\b[^>]*rel="modulepreload"[^>]*>/gi, "")
     .replace(/(href|src)="\/(?!\/)/g, `$1="${basePath}`);
 
-  await writeFile("pages/index.html", staticHtml);
-  await writeFile("pages/.nojekyll", "");
+  await writeFile("github-pages-dist/index.html", staticHtml);
+  await writeFile("github-pages-dist/.nojekyll", "");
 } finally {
   server.kill("SIGTERM");
 }
