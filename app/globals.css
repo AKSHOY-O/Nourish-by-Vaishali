@@ -56,3 +56,45 @@ footer{background:#111c15;color:#e9efe9;padding:55px max(24px,calc((100% - 1160p
 @media(max-width:430px){.nav-wrap,.new-hero,.ticker>div,.section,.journey-inner{width:calc(100% - 22px)}.nav-wrap{min-height:68px}.logo{gap:9px}.logo>span{width:40px;height:40px;border-radius:13px}.new-hero{padding:32px 18px}.new-hero h1{font-size:clamp(39px,12.2vw,46px);line-height:1.01;margin:22px 0}.status{font-size:9px}.micro-trust{grid-template-columns:1fr}.hero-bento{grid-template-rows:320px 155px auto}.food-card{border-radius:54px 18px 18px 18px}.food-card>span{left:19px;bottom:18px;font-size:24px}.metric-card{min-height:155px}.section{padding-block:64px}.intro h2,.section-top h2,.visual-heading h2,.difference h2,.journey h2,.contact-band h2,.feedback-copy h2,.faq-new h2{font-size:clamp(35px,10.5vw,42px)}.intro-grid{margin-top:20px}.values-grid{margin-top:40px}.services-bento h3{font-size:24px}.meet-content{padding:38px 20px}.meet-content h2{font-size:clamp(36px,10.5vw,42px)}.meet-points span{width:100%;justify-content:flex-start}.photo-mosaic{grid-template-rows:300px 220px 205px 245px;gap:10px}.photo-quote{padding:23px}.difference-card{padding:34px 19px}.outcome-cloud span{flex-basis:100%}.journey{padding-block:66px}.journey-inner{gap:28px}.journey li{padding:18px 0}.contact-band{padding-block:64px}.contact-options>a{grid-template-columns:40px minmax(0,1fr) 20px;padding:13px}.feedback-shell{padding:34px 18px}.feedback-form{padding:19px}.feedback-form textarea{font-size:16px}.faq-new{padding-top:18px}.footer-main{gap:28px}.footer-bottom{margin-top:34px}.ticker>div span:nth-of-type(n+2),.ticker>div i:nth-of-type(n+2){display:none}}
 @media(hover:none){.cta:hover,.values-grid article:hover,.services-bento article:hover,.outcome-cloud span:hover,.contact-options>a:hover,.meet-card:hover .meet-photo img,.feedback-form button:hover{transform:none;box-shadow:initial}.services-bento article:before,.cta:after{display:none}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
+
+/* Refined motion system */
+.new-hero:after{content:"";position:absolute;width:min(52vw,620px);aspect-ratio:1;border-radius:50%;right:-18%;top:-42%;z-index:0;background:radial-gradient(circle,#dfeeaf8a 0%,#f5cdb94d 42%,transparent 70%);filter:blur(4px);pointer-events:none}.status i{transform-origin:center}.cta b,.nav-book span,.services-bento a b,.contact-options i,.feedback-form button svg{transition:transform .3s cubic-bezier(.2,.8,.2,1)}.photo-mosaic figure,.meet-photo{isolation:isolate}.photo-mosaic figure:before,.meet-photo:before{content:"";position:absolute;inset:0;z-index:2;background:linear-gradient(115deg,transparent 25%,#ffffff35 48%,transparent 70%);transform:translateX(-135%);transition:transform .85s cubic-bezier(.2,.7,.2,1);pointer-events:none}.faq-list summary:after{transition:transform .25s ease}.faq-list details[open] summary:after{transform:rotate(180deg)}
+
+@media(hover:hover){
+  .cta:hover b,.nav-book:hover span,.services-bento a:hover b,.contact-options a:hover i,.feedback-form button:hover svg{transform:translateX(4px)}
+  .photo-mosaic figure:hover:before,.meet-card:hover .meet-photo:before{transform:translateX(135%)}
+  .metric-card:hover .metric-line i{width:82%}
+}
+.metric-line i{transition:width .65s cubic-bezier(.2,.75,.2,1)}
+
+@media(prefers-reduced-motion:no-preference){
+  .hero-main{animation:heroReveal .8s cubic-bezier(.2,.75,.2,1) both!important}
+  .hero-bento{animation:heroReveal .9s .12s cubic-bezier(.2,.75,.2,1) both!important}
+  .new-hero:after{animation:ambientGlow 9s ease-in-out infinite}
+  .status i{animation:statusPulse 2.7s ease-out infinite}
+  .float-wa{animation:gentlePulse 3s ease-in-out infinite}
+  @keyframes heroReveal{from{opacity:.15;transform:translateY(24px);filter:blur(5px)}to{opacity:1;transform:translateY(0);filter:blur(0)}}
+  @keyframes ambientGlow{0%,100%{transform:translate3d(0,0,0) scale(1)}50%{transform:translate3d(-5%,7%,0) scale(1.08)}}
+  @keyframes statusPulse{0%{box-shadow:0 0 0 0 #58a66e75}65%,100%{box-shadow:0 0 0 9px #58a66e00}}
+
+  @supports (animation-timeline:view()){
+    .intro-grid,.values-grid article,.meet-card,.section-top,.services-bento article,.visual-heading,.photo-mosaic>*,
+    .difference-card,.journey-copy,.journey li,.contact-band>*,.feedback-copy,.feedback-form,.faq-new>*{
+      animation:scrollReveal linear both;
+      animation-timeline:view();
+      animation-range:entry 2% cover 24%;
+    }
+    .values-grid article:nth-child(2),.services-bento article:nth-child(2),.journey li:nth-child(2),.photo-mosaic>*:nth-child(2){animation-range:entry 7% cover 27%}
+    .values-grid article:nth-child(3),.services-bento article:nth-child(3),.journey li:nth-child(3),.photo-mosaic>*:nth-child(3){animation-range:entry 12% cover 30%}
+    .services-bento article:nth-child(4),.journey li:nth-child(4),.photo-mosaic>*:nth-child(4){animation-range:entry 17% cover 33%}
+    @keyframes scrollReveal{from{opacity:.18;transform:translateY(34px) scale(.985);filter:blur(3px)}to{opacity:1;transform:translateY(0) scale(1);filter:blur(0)}}
+  }
+}
+
+@media(max-width:650px) and (prefers-reduced-motion:no-preference){
+  .new-hero:after{animation-duration:12s}
+  @supports (animation-timeline:view()){
+    .intro-grid,.values-grid article,.meet-card,.section-top,.services-bento article,.visual-heading,.photo-mosaic>*,
+    .difference-card,.journey-copy,.journey li,.contact-band>*,.feedback-copy,.feedback-form,.faq-new>*{animation-range:entry 0% cover 18%}
+  }
+}
