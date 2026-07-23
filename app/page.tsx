@@ -15,7 +15,7 @@ export default function Home() {
       <div className="nav-wrap">
         <a className="logo" href="#home"><span>V</span><div><b>NOURISH</b><small>by Vaishali</small></div></a>
         <nav aria-label="Main navigation"><a href="#approach">Approach</a><a href="#services">Services</a><a href="#journey">Your journey</a><a href="#feedback">Feedback</a><a href="#faq">FAQs</a></nav>
-        <a className="nav-book" href={whatsapp} target="_blank" rel="noreferrer">Book a consultation <span><ArrowUpRight size={15}/></span></a>
+        <a className="nav-book" href={whatsapp} target="_blank" rel="noreferrer" aria-label="Book a nutrition consultation on WhatsApp">Book a consultation <span><ArrowUpRight size={15}/></span></a>
       </div>
     </header>
 
@@ -49,7 +49,7 @@ export default function Home() {
     <section className="meet-vaishali section" aria-labelledby="meet-vaishali-title">
       <div className="meet-card">
         <div className="meet-photo">
-          <img src="/vaishali-portrait.png" alt="Vaishali, nutrition and wellness consultant"/>
+          <img src="/vaishali-portrait.png" alt="Vaishali, nutrition and wellness consultant" loading="lazy" decoding="async"/>
           <span className="meet-badge"><Sprout size={14}/> YOUR NUTRITION GUIDE</span>
         </div>
         <div className="meet-content">
@@ -70,10 +70,10 @@ export default function Home() {
     <section className="visual-story section">
       <div className="visual-heading"><div><div className="kicker">FOOD THAT FEELS GOOD</div><h2>Beautifully balanced.<br/><em>Completely achievable.</em></h2></div><p>Healthy eating can be colourful, familiar and deeply satisfying. The focus is progress—not perfection.</p></div>
       <div className="photo-mosaic">
-        <figure className="photo-large"><img src="https://images.unsplash.com/photo-1498837167922-ddd27525d352?auto=format&fit=crop&w=1400&q=88" alt="Wholesome ingredients for balanced everyday meals"/><figcaption><span>01</span> Fresh, familiar ingredients</figcaption></figure>
-        <figure className="photo-small"><img src="https://images.unsplash.com/photo-1543362906-acfc16c67564?auto=format&fit=crop&w=900&q=88" alt="Colourful nourishing food prepared with care"/><figcaption><span>02</span> Real food, real joy</figcaption></figure>
+        <figure className="photo-large"><img src="https://images.unsplash.com/photo-1498837167922-ddd27525d352?auto=format&fit=crop&w=1400&q=88" alt="Wholesome ingredients for balanced everyday meals" loading="lazy" decoding="async"/><figcaption><span>01</span> Fresh, familiar ingredients</figcaption></figure>
+        <figure className="photo-small"><img src="https://images.unsplash.com/photo-1543362906-acfc16c67564?auto=format&fit=crop&w=900&q=88" alt="Colourful nourishing food prepared with care" loading="lazy" decoding="async"/><figcaption><span>02</span> Real food, real joy</figcaption></figure>
         <div className="photo-quote"><Sparkles size={24}/><p>“A good plan should fit your life beautifully.”</p><small>THE NOURISH PHILOSOPHY</small></div>
-        <figure className="photo-wide"><img src="https://images.unsplash.com/photo-1556911073-38141963c9e0?auto=format&fit=crop&w=1200&q=88" alt="Healthy meal preparation in a welcoming kitchen"/><figcaption><span>03</span> Skills that last beyond the plan</figcaption></figure>
+        <figure className="photo-wide"><img src="https://images.unsplash.com/photo-1556911073-38141963c9e0?auto=format&fit=crop&w=1200&q=88" alt="Healthy meal preparation in a welcoming kitchen" loading="lazy" decoding="async"/><figcaption><span>03</span> Skills that last beyond the plan</figcaption></figure>
       </div>
     </section>
 
