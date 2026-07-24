@@ -31,9 +31,9 @@ export default function Home() {
         <div className="micro-trust"><span><Check size={11}/> Personal plans</span><span><Check size={11}/> Indian food friendly</span><span><Check size={11}/> Ongoing support</span></div>
       </div>
       <div className="hero-bento">
-        <div className="food-card hero-picture-card"><img src="/hero-real-life-new.jpg" alt="Preparing a colourful balanced Indian meal in a warm home kitchen"/><span>Eat better,<br/>not less.</span><i className="image-badge">Made for real life</i></div>
-        <div className="metric-card hero-picture-card"><img src="/hero-goal-new.jpg" alt="A colourful balanced breakfast representing steady everyday wellbeing"/><div className="hero-card-copy"><small>THE GOAL</small><strong>Feel good<br/>every day.</strong><div className="metric-line"><i></i></div></div></div>
-        <div className="plan-card hero-picture-card"><img src="/hero-roadmap-new.jpg" alt="A blank nutrition planning notebook surrounded by balanced Indian meals"/><div className="hero-card-copy"><small>MADE AROUND YOU</small><b>Personal roadmap</b></div></div>
+        <div className="food-card hero-picture-card"><picture><source media="(max-width: 650px)" srcSet="/hero-real-life-new.jpg"/><img src="/hero-real-life-desktop.jpg" alt="Preparing a colourful balanced Indian meal in a warm home kitchen"/></picture><span>Eat better,<br/>not less.</span><i className="image-badge">Made for real life</i></div>
+        <div className="metric-card hero-picture-card"><picture><source media="(max-width: 650px)" srcSet="/hero-goal-mobile.jpg"/><img src="/hero-goal-new.jpg" alt="A colourful balanced breakfast representing steady everyday wellbeing"/></picture><div className="hero-card-copy"><small>THE GOAL</small><strong>Feel good<br/>every day.</strong><div className="metric-line"><i></i></div></div></div>
+        <div className="plan-card hero-picture-card"><picture><source media="(max-width: 650px)" srcSet="/hero-roadmap-mobile.jpg"/><img src="/hero-roadmap-new.jpg" alt="A blank nutrition planning notebook surrounded by balanced Indian meals"/></picture><div className="hero-card-copy"><small>MADE AROUND YOU</small><b>Personal roadmap</b></div></div>
       </div>
     </section>
 
