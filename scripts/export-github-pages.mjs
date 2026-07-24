@@ -34,7 +34,7 @@ try {
   const staticHtml = renderedHtml
     .replace(/<script\b[^>]*>[\s\S]*?<\/script>/gi, "")
     .replace(/<link\b[^>]*rel="modulepreload"[^>]*>/gi, "")
-    .replace(/(href|src)="\/(?!\/)/g, `$1="${basePath}`)
+    .replace(/(href|src|srcSet)="\/(?!\/)/g, `$1="${basePath}`)
     .replace("</head>", `${scrollResetScript}</head>`);
 
   await writeFile("github-pages-dist/index.html", staticHtml);
