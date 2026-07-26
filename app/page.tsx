@@ -19,21 +19,24 @@ export default function Home() {
       </div>
     </header>
 
-    <section className="new-hero" id="home">
-      <div className="hero-grid-bg" aria-hidden="true"></div>
-      <div className="hero-main">
-        <div className="status"><i></i> Online consultations open</div>
-        <h1>Good food.<br/><em>Clear guidance.</em><br/>A healthier you.</h1>
-        <p>Personalised nutrition that fits Indian food, busy schedules and real life—without crash diets, guilt or confusing rules.</p>
-        <div className="hero-cta">
-          <a className="cta cta-dark" href="#contact">Get started <b><ArrowDown size={16}/></b></a>
+    <section className="new-hero editorial-hero" id="home">
+      <div className="hero-paper" aria-hidden="true"></div>
+      <div className="botanical botanical-one" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+      <div className="botanical botanical-two" aria-hidden="true"><i></i><i></i><i></i></div>
+      <div className="hero-image-stage">
+        <div className="hero-image-blob">
+          <picture><source media="(max-width: 650px)" srcSet="/hero-goal-mobile.jpg"/><img src="/hero-goal-new.jpg" alt="A colourful balanced plate with fresh ingredients"/></picture>
         </div>
-        <div className="micro-trust"><span><Check size={11}/> Personal plans</span><span><Check size={11}/> Indian food friendly</span><span><Check size={11}/> Ongoing support</span></div>
+        <span className="plate-note"><Sprout size={14}/> REAL FOOD · REAL LIFE</span>
       </div>
-      <div className="hero-bento">
-        <div className="food-card hero-picture-card"><picture><source media="(max-width: 650px)" srcSet="/hero-real-life-new.jpg"/><img src="/hero-real-life-desktop.jpg" alt="Preparing a colourful balanced Indian meal in a warm home kitchen"/></picture><span>Eat better,<br/>not less.</span><i className="image-badge">Made for real life</i></div>
-        <div className="metric-card hero-picture-card"><picture><source media="(max-width: 650px)" srcSet="/hero-goal-mobile.jpg"/><img src="/hero-goal-new.jpg" alt="A colourful balanced breakfast representing steady everyday wellbeing"/></picture><div className="hero-card-copy"><small>THE GOAL</small><strong>Feel good<br/>every day.</strong><div className="metric-line"><i></i></div></div></div>
-        <div className="plan-card hero-picture-card"><picture><source media="(max-width: 650px)" srcSet="/hero-roadmap-mobile.jpg"/><img src="/hero-roadmap-new.jpg" alt="A blank nutrition planning notebook surrounded by balanced Indian meals"/></picture><div className="hero-card-copy"><small>MADE AROUND YOU</small><b>Personal roadmap</b></div></div>
+      <div className="hero-main">
+        <div className="status"><i></i> Personal nutrition by Vaishali</div>
+        <h1>Balance<br/><em>your daily</em><br/>plate.</h1>
+        <p>Expert nutrition guidance built around Indian food, your routine and the life you actually live—colourful, practical and completely personal.</p>
+        <div className="hero-cta">
+          <a className="cta cta-dark" href="#contact">Book your consultation <b><ArrowDown size={16}/></b></a>
+        </div>
+        <div className="micro-trust"><span><Check size={11}/> Indian food friendly</span><span><Check size={11}/> No crash diets</span><span><Check size={11}/> Ongoing support</span></div>
       </div>
     </section>
 
