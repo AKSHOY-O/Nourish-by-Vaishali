@@ -19,24 +19,25 @@ export default function Home() {
       </div>
     </header>
 
-    <section className="new-hero editorial-hero" id="home">
-      <div className="hero-paper" aria-hidden="true"></div>
-      <div className="botanical botanical-one" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
-      <div className="botanical botanical-two" aria-hidden="true"><i></i><i></i><i></i></div>
-      <div className="hero-image-stage">
-        <div className="hero-image-blob">
-          <picture><source media="(max-width: 650px)" srcSet="/hero-goal-mobile.jpg"/><img src="/hero-goal-new.jpg" alt="A colourful balanced plate with fresh ingredients"/></picture>
-        </div>
-        <span className="plate-note"><Sprout size={14}/> REAL FOOD · REAL LIFE</span>
+    <section className="fan-hero" id="home" aria-labelledby="fan-hero-title">
+      <div className="grain" aria-hidden="true"></div>
+      <p className="fan-eyebrow"><span></span> Personal nutrition by Vaishali</p>
+      <h1 className="fan-title" id="fan-hero-title"><span>Small</span> <span>steps,</span></h1>
+      <div className="fan-ghost" aria-hidden="true"><span>big</span> <span>change.</span></div>
+
+      <div className="fan-stage" aria-label="A gallery of nourishing food and personal care">
+        <figure className="fan-card fan-card-1"><img src="/hero-goal-new.jpg" alt="A colourful balanced meal"/><figcaption>Balanced</figcaption></figure>
+        <figure className="fan-card fan-card-2"><img src="/hero-roadmap-new.jpg" alt="A personal nutrition roadmap"/><figcaption>Personal</figcaption></figure>
+        <figure className="fan-card fan-card-3"><img src="/vaishali-portrait.png" alt="Vaishali, nutrition consultant"/><figcaption>Supported</figcaption></figure>
+        <figure className="fan-card fan-card-4"><img src="/hero-real-life-desktop.jpg" alt="Preparing a fresh meal in a real kitchen"/><figcaption>Real life</figcaption></figure>
+        <figure className="fan-card fan-card-5"><img src="/nourish-hero-premium.png" alt="Fresh nourishing ingredients"/><figcaption>Colourful</figcaption></figure>
+        <figure className="fan-card fan-card-6"><img src="/hero-goal-mobile.jpg" alt="An everyday healthy plate"/><figcaption>Practical</figcaption></figure>
+        <figure className="fan-card fan-card-7"><img src="/vaishali-portrait-professional.png" alt="Vaishali smiling warmly"/><figcaption>Together</figcaption></figure>
       </div>
-      <div className="hero-main">
-        <div className="status"><i></i> Personal nutrition by Vaishali</div>
-        <h1>Balance<br/><em>your daily</em><br/>plate.</h1>
-        <p>Expert nutrition guidance built around Indian food, your routine and the life you actually live—colourful, practical and completely personal.</p>
-        <div className="hero-cta">
-          <a className="cta cta-dark" href="#contact">Book your consultation <b><ArrowDown size={16}/></b></a>
-        </div>
-        <div className="micro-trust"><span><Check size={11}/> Indian food friendly</span><span><Check size={11}/> No crash diets</span><span><Check size={11}/> Ongoing support</span></div>
+
+      <div className="fan-subline">
+        <a className="fan-cta" href="#contact">Start your plan <span><ArrowUpRight size={15}/></span></a>
+        <p>Real Indian food. Clear guidance. Zero crash diets.</p>
       </div>
     </section>
 
@@ -46,6 +47,19 @@ export default function Home() {
       <div className="kicker">01 / A DIFFERENT APPROACH</div>
       <div className="intro-grid"><h2>Nutrition that works <em>with your life,</em> not against it.</h2><div><p>Vaishali turns complex nutrition advice into realistic everyday choices. Your plan begins with your health, your food culture and your routine—then grows with you.</p><a href="#journey">How it works <span><ArrowDown size={14}/></span></a></div></div>
       <div className="values-grid"><article><span><Ear size={18}/></span><h3>Listen first</h3><p>Your story matters more than a generic food chart.</p><i>Personal</i></article><article><span><ClipboardCheck size={18}/></span><h3>Keep it practical</h3><p>Familiar meals, flexible choices and realistic routines.</p><i>Flexible</i></article><article><span><ShieldCheck size={18}/></span><h3>Build confidence</h3><p>Understand your body and make decisions without fear.</p><i>Lasting</i></article></div>
+    </section>
+
+    <section className="nutrition-gallery section" aria-labelledby="nutrition-gallery-title">
+      <div className="gallery-head">
+        <div><div className="kicker">REAL FOOD · REAL ROUTINES</div><h2 id="nutrition-gallery-title">A healthier rhythm,<br/>built <em>around you.</em></h2></div>
+        <p>No generic charts or impossible rules. Every recommendation connects to food you know, days you live and goals that matter to you.</p>
+      </div>
+      <div className="gallery-grid">
+        <figure><img src="/hero-real-life-desktop.jpg" alt="Fresh food being prepared in a warm home kitchen" loading="lazy"/><figcaption><b>Made for real life</b><span>Familiar food, flexible choices</span></figcaption></figure>
+        <figure><img src="/hero-goal-new.jpg" alt="A colourful balanced everyday plate" loading="lazy"/><figcaption><b>Your daily plate</b><span>Balanced, joyful and satisfying</span></figcaption></figure>
+        <figure><img src="/hero-roadmap-new.jpg" alt="A nutrition notebook and wholesome meals" loading="lazy"/><figcaption><b>Personal roadmap</b><span>Clear steps without overwhelm</span></figcaption></figure>
+        <figure><img src="/vaishali-portrait.png" alt="Vaishali, your nutrition guide" loading="lazy"/><figcaption><b>Care by Vaishali</b><span>Warm, practical support</span></figcaption></figure>
+      </div>
     </section>
 
     <section className="meet-vaishali section" aria-labelledby="meet-vaishali-title">

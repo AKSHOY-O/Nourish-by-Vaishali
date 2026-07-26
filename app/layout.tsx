@@ -4,9 +4,21 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "Nourish by Vaishali | Registered Dietitian & Nutritionist",
   description: "Personalised, science-backed nutrition programmes for lasting health, energy and confidence.",
+  metadataBase: new URL("https://akshoy-o.github.io/Nourish-by-Vaishali/"),
+  openGraph: {
+    title: "Small steps, big change. | Nourish by Vaishali",
+    description: "Personal nutrition guidance built around Indian food and real life.",
+    images: [{ url: "og.png", width: 1734, height: 907, alt: "Nourish by Vaishali — Small steps, big change." }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Small steps, big change. | Nourish by Vaishali",
+    description: "Personal nutrition guidance built around Indian food and real life.",
+    images: ["og.png"],
+  },
   icons: {
-    icon: "/favicon.svg",
-    shortcut: "/favicon.svg",
+    icon: "https://akshoy-o.github.io/Nourish-by-Vaishali/favicon.svg",
+    shortcut: "https://akshoy-o.github.io/Nourish-by-Vaishali/favicon.svg",
   },
 };
 
