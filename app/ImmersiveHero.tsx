@@ -1,45 +1,34 @@
-"use client";
-
-import { ArrowDown, Sparkles } from "lucide-react";
+import { ArrowDown, Check, Sparkles } from "lucide-react";
 
 export default function ImmersiveHero() {
-  function handlePointerMove(event: React.PointerEvent<HTMLElement>) {
-    if (event.pointerType === "touch" || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
-    const rect = event.currentTarget.getBoundingClientRect();
-    const x = ((event.clientX - rect.left) / rect.width - 0.5) * 2;
-    const y = ((event.clientY - rect.top) / rect.height - 0.5) * 2;
-    event.currentTarget.style.setProperty("--mx", x.toFixed(3));
-    event.currentTarget.style.setProperty("--my", y.toFixed(3));
-  }
-
   return (
-    <section
-      className="hero"
-      id="home"
-      aria-labelledby="hero-title"
-      onPointerMove={handlePointerMove}
-      onPointerLeave={(event) => {
-        event.currentTarget.style.setProperty("--mx", "0");
-        event.currentTarget.style.setProperty("--my", "0");
-      }}
-    >
-      <div className="hero-art" aria-hidden="true">
-        <img src="/og.png" alt="" />
-      </div>
-      <div className="hero-wash" aria-hidden="true" />
-      <div className="hero-orbit orbit-one" aria-hidden="true" />
-      <div className="hero-orbit orbit-two" aria-hidden="true" />
+    <section className="hero" id="home" aria-labelledby="hero-title">
       <div className="hero-copy">
-        <p className="hero-eyebrow"><Sparkles size={14} /> Personal nutrition, made human</p>
-        <h1 id="hero-title">Food that fits<br /><em>real life.</em></h1>
-        <p className="hero-summary">Nutrition guidance built around Indian food, busy days and sustainable change.</p>
-        <a href="#philosophy">Discover the approach <ArrowDown size={15} /></a>
+        <p className="hero-eyebrow"><Sparkles size={16} /> Personal nutrition, made human</p>
+        <h1 id="hero-title">Eat well.<br /><span>Live fully.</span></h1>
+        <p className="hero-summary">Practical nutrition guidance built around Indian food, busy days and the life you actually live.</p>
+        <a href="#philosophy">See how it works <ArrowDown size={16} /></a>
+        <div className="hero-points">
+          <span><Check size={14} /> No crash diets</span>
+          <span><Check size={14} /> Familiar meals</span>
+          <span><Check size={14} /> Personal support</span>
+        </div>
       </div>
-      <div className="hero-proof">
-        <span>01</span>
-        <p>Familiar meals.<br />Clear guidance.<br />No impossible rules.</p>
+      <div className="hero-visual">
+        <div className="hero-shape shape-dot" aria-hidden="true"></div>
+        <div className="hero-shape shape-flower" aria-hidden="true">✦</div>
+        <figure>
+          <img src="/nourish-hero-premium.png" alt="A colourful, balanced meal prepared with fresh ingredients" />
+        </figure>
+        <div className="hero-sticker">
+          <strong>100%</strong>
+          <span>real-life<br />friendly</span>
+        </div>
+        <div className="hero-note">Food that feels good<br /><b>and fits your day.</b></div>
       </div>
-      <div className="hero-scroll"><span></span> Scroll to explore</div>
+      <div className="hero-marquee" aria-hidden="true">
+        <span>NOURISH</span><i>✦</i><span>GROW</span><i>✦</i><span>THRIVE</span>
+      </div>
     </section>
   );
 }

@@ -38,5 +38,5 @@ test("includes responsive and reduced-motion styles", async () => {
   assert.match(css, /prefers-reduced-motion: no-preference/);
   assert.match(css, /\.service-list/);
   assert.match(css, /\.contact-options/);
-  assert.match(css, /\.hero-art/);
+  assert.match(css, /\.hero-visual/);
 });
