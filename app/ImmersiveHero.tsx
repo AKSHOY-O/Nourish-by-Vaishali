@@ -1,6 +1,6 @@
 "use client";
 
-import { ArrowDown, ArrowUpRight, Check } from "lucide-react";
+import { ArrowDown, Sparkles } from "lucide-react";
 
 export default function ImmersiveHero() {
   function handlePointerMove(event: React.PointerEvent<HTMLElement>) {
@@ -14,36 +14,32 @@ export default function ImmersiveHero() {
 
   return (
     <section
-      className="front-cinematic"
+      className="hero"
       id="home"
-      aria-label="Food that fits real life — Nourish by Vaishali"
+      aria-labelledby="hero-title"
       onPointerMove={handlePointerMove}
       onPointerLeave={(event) => {
         event.currentTarget.style.setProperty("--mx", "0");
         event.currentTarget.style.setProperty("--my", "0");
       }}
     >
-      <picture className="front-art">
-        <img src="/og.png" alt="Food that fits real life — a nourishing Indian meal presented as a floating world"/>
-      </picture>
-      <div className="front-shade" aria-hidden="true"></div>
-      <div className="front-glow" aria-hidden="true"></div>
-      <div className="front-particles" aria-hidden="true">
-        <i></i><i></i><i></i><i></i><i></i><i></i>
+      <div className="hero-art" aria-hidden="true">
+        <img src="/og.png" alt="" />
       </div>
-
-      <div className="front-mobile-copy">
-        <p><span></span>NOURISH BY VAISHALI</p>
-        <h1 id="front-cinematic-title">Food that fits<br/><em>real life.</em></h1>
-        <small>Personal nutrition for Indian food, busy days and sustainable change.</small>
+      <div className="hero-wash" aria-hidden="true" />
+      <div className="hero-orbit orbit-one" aria-hidden="true" />
+      <div className="hero-orbit orbit-two" aria-hidden="true" />
+      <div className="hero-copy">
+        <p className="hero-eyebrow"><Sparkles size={14} /> Personal nutrition, made human</p>
+        <h1 id="hero-title">Food that fits<br /><em>real life.</em></h1>
+        <p className="hero-summary">Nutrition guidance built around Indian food, busy days and sustainable change.</p>
+        <a href="#philosophy">Discover the approach <ArrowDown size={15} /></a>
       </div>
-
-      <div className="front-actions">
-        <a href="#contact">Book a consultation <ArrowUpRight size={16}/></a>
-        <span><Check size={13}/> Personal · practical · possible</span>
+      <div className="hero-proof">
+        <span>01</span>
+        <p>Familiar meals.<br />Clear guidance.<br />No impossible rules.</p>
       </div>
-
-      <a className="front-scroll" href="#approach">Explore more <ArrowDown size={15}/></a>
+      <div className="hero-scroll"><span></span> Scroll to explore</div>
     </section>
   );
 }

@@ -1,115 +1,257 @@
-import { Apple, ArrowDown, ArrowRight, ArrowUp, ArrowUpRight, Check, ClipboardCheck, Ear, Heart, HeartPulse, Leaf, MessageCircle, PhoneCall, Play, Scale, ShieldCheck, Sprout, Sun, TrendingUp, Waves } from "lucide-react";
+import {
+  Apple,
+  ArrowDown,
+  ArrowRight,
+  ArrowUp,
+  ArrowUpRight,
+  Check,
+  Clock3,
+  HeartPulse,
+  Leaf,
+  MessageCircle,
+  Phone,
+  Quote,
+  Scale,
+  Sparkles,
+} from "lucide-react";
 import ImmersiveHero from "./ImmersiveHero";
 
-const whatsapp = "https://wa.me/918003924522?text=Hello%20Vaishali%2C%20I%20would%20like%20to%20book%20a%20nutrition%20consultation.";
+const whatsapp =
+  "https://wa.me/918003924522?text=Hello%20Vaishali%2C%20I%20would%20like%20to%20book%20a%20nutrition%20consultation.";
 
 const services = [
-  { icon: Scale, title: "Sustainable Weight Care", text: "Build a calmer, healthier relationship with food while working towards lasting weight goals.", tone: "green" },
-  { icon: HeartPulse, title: "PCOS & Metabolic Health", text: "Practical nutrition support for PCOS, thyroid health, insulin resistance and blood sugar.", tone: "peach" },
-  { icon: Leaf, title: "Gut Health", text: "A thoughtful food-first approach for bloating, acidity, irregular digestion and everyday comfort.", tone: "sand" },
-  { icon: Apple, title: "Everyday Nutrition", text: "Simple meal systems for busy professionals, families, prenatal care and healthy ageing.", tone: "cream" },
+  {
+    number: "01",
+    icon: Scale,
+    title: "Sustainable weight care",
+    text: "Build habits that support your goals without crash diets, guilt or extreme restrictions.",
+    image: "/hero-goal-new.jpg",
+  },
+  {
+    number: "02",
+    icon: HeartPulse,
+    title: "PCOS & metabolic health",
+    text: "Food-first support for PCOS, thyroid health, insulin resistance and blood sugar.",
+    image: "/hero-roadmap-new.jpg",
+  },
+  {
+    number: "03",
+    icon: Leaf,
+    title: "Gut health",
+    text: "A thoughtful approach to bloating, acidity, irregular digestion and everyday comfort.",
+    image: "/hero-real-life-desktop.jpg",
+  },
+  {
+    number: "04",
+    icon: Apple,
+    title: "Everyday nutrition",
+    text: "Simple meal systems for busy professionals, families, prenatal care and healthy ageing.",
+    image: "/nourish-hero-premium.png",
+  },
+];
+
+const steps = [
+  ["Tell your story", "We begin with your health, routine, food preferences and the changes you want to feel."],
+  ["Build your roadmap", "You receive clear nutrition guidance shaped around familiar Indian meals and real days."],
+  ["Grow with support", "Follow-ups help you adjust, learn and create habits that remain useful long after the plan."],
 ];
 
 export default function Home() {
-  return <main>
-    <header className="site-header">
-      <div className="nav-wrap">
-        <a className="logo" href="#home"><span>V</span><div><b>NOURISH</b><small>by Vaishali</small></div></a>
-        <nav aria-label="Main navigation"><a href="#approach">Approach</a><a href="#services">Services</a><a href="#journey">Your journey</a><a href="#feedback">Feedback</a><a href="#faq">FAQs</a></nav>
-        <a className="nav-book" href="#contact">Book a consultation <span><ArrowDown size={15}/></span></a>
-      </div>
-    </header>
+  return (
+    <main>
+      <header className="site-header">
+        <a className="brand" href="#home" aria-label="Nourish by Vaishali, home">
+          <span className="brand-mark">V</span>
+          <span><b>Nourish</b><small>by Vaishali</small></span>
+        </a>
+        <nav aria-label="Main navigation">
+          <a href="#philosophy">Philosophy</a>
+          <a href="#services">Services</a>
+          <a href="#process">Process</a>
+          <a href="#about">About</a>
+        </nav>
+        <a className="header-contact" href="#contact">
+          Contact <ArrowDown size={14} />
+        </a>
+      </header>
 
-    <ImmersiveHero/>
+      <ImmersiveHero />
 
-    <section className="ticker" aria-label="Nutrition philosophy"><div><span>NO CRASH DIETS</span><i>✦</i><span>REAL INDIAN MEALS</span><i>✦</i><span>SCIENCE-BACKED CARE</span><i>✦</i><span>SMALL STEPS, LASTING CHANGE</span></div></section>
+      <section className="promise-strip" aria-label="Practice highlights">
+        <div><Sparkles size={15} /> Science-led</div>
+        <div><Leaf size={15} /> Indian food friendly</div>
+        <div><Clock3 size={15} /> Made for real schedules</div>
+        <div><HeartPulse size={15} /> Judgement-free care</div>
+      </section>
 
-    <section className="intro section" id="approach">
-      <div className="kicker">01 / A DIFFERENT APPROACH</div>
-      <div className="intro-grid"><h2>Nutrition that works <em>with your life,</em> not against it.</h2><div><p>Vaishali turns complex nutrition advice into realistic everyday choices. Your plan begins with your health, your food culture and your routine—then grows with you.</p><a href="#journey">How it works <span><ArrowDown size={14}/></span></a></div></div>
-      <div className="values-grid"><article><span><Ear size={18}/></span><h3>Listen first</h3><p>Your story matters more than a generic food chart.</p><i>Personal</i></article><article><span><ClipboardCheck size={18}/></span><h3>Keep it practical</h3><p>Familiar meals, flexible choices and realistic routines.</p><i>Flexible</i></article><article><span><ShieldCheck size={18}/></span><h3>Build confidence</h3><p>Understand your body and make decisions without fear.</p><i>Lasting</i></article></div>
-    </section>
-
-    <section className="nutrition-gallery section" aria-labelledby="nutrition-gallery-title">
-      <div className="gallery-head">
-        <div><div className="kicker">REAL FOOD · REAL ROUTINES</div><h2 id="nutrition-gallery-title">A healthier rhythm,<br/>built <em>around you.</em></h2></div>
-        <p>No generic charts or impossible rules. Every recommendation connects to food you know, days you live and goals that matter to you.</p>
-      </div>
-      <div className="gallery-grid">
-        <figure><img src="/hero-real-life-desktop.jpg" alt="Fresh food being prepared in a warm home kitchen" loading="lazy"/><figcaption><b>Made for real life</b><span>Familiar food, flexible choices</span></figcaption></figure>
-        <figure><img src="/hero-goal-new.jpg" alt="A colourful balanced everyday plate" loading="lazy"/><figcaption><b>Your daily plate</b><span>Balanced, joyful and satisfying</span></figcaption></figure>
-        <figure><img src="/hero-roadmap-new.jpg" alt="A nutrition notebook and wholesome meals" loading="lazy"/><figcaption><b>Personal roadmap</b><span>Clear steps without overwhelm</span></figcaption></figure>
-        <figure><img src="/vaishali-portrait.png" alt="Vaishali, your nutrition guide" loading="lazy"/><figcaption><b>Care by Vaishali</b><span>Warm, practical support</span></figcaption></figure>
-      </div>
-    </section>
-
-    <section className="meet-vaishali section" aria-labelledby="meet-vaishali-title">
-      <div className="meet-card">
-        <div className="meet-photo">
-          <img src="/vaishali-portrait.png" alt="Vaishali, nutrition and wellness consultant" loading="lazy" decoding="async"/>
-          <span className="meet-badge"><Sprout size={14}/> YOUR NUTRITION GUIDE</span>
+      <section className="philosophy section-pad" id="philosophy">
+        <div className="section-label"><span>01</span> Philosophy</div>
+        <div className="philosophy-grid">
+          <h2>Healthier eating should feel like <em>more life,</em> not more rules.</h2>
+          <div className="philosophy-copy">
+            <p>Vaishali turns nutrition science into choices that make sense in your kitchen, your culture and your everyday routine.</p>
+            <div className="signature-line">
+              <span>Personal</span><i></i><span>Practical</span><i></i><span>Possible</span>
+            </div>
+          </div>
         </div>
-        <div className="meet-content">
-          <div className="kicker light">MEET VAISHALI</div>
-          <h2 id="meet-vaishali-title">Guidance that feels<br/><em>personal and possible.</em></h2>
-          <p>Vaishali brings warmth, curiosity and practical thinking to every consultation. Her approach starts with listening, respects your food culture and turns healthy choices into routines that fit everyday life.</p>
-          <div className="meet-points"><span><Check size={13}/> Judgement-free care</span><span><Check size={13}/> Realistic Indian meals</span><span><Check size={13}/> Clear ongoing support</span></div>
-          <a className="cta cta-white" href="#contact">Start your plan <b><ArrowDown size={16}/></b></a>
+        <div className="principle-cards">
+          <article>
+            <span>01</span>
+            <h3>Listen before planning</h3>
+            <p>Your story, symptoms and goals shape every recommendation.</p>
+          </article>
+          <article>
+            <span>02</span>
+            <h3>Keep familiar food</h3>
+            <p>Plans work with your favourite meals rather than replacing your life.</p>
+          </article>
+          <article>
+            <span>03</span>
+            <h3>Teach lasting confidence</h3>
+            <p>Understand your choices so progress does not depend on a rigid chart.</p>
+          </article>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section className="services-new section" id="services">
-      <div className="section-top"><div><div className="kicker">02 / HOW I CAN HELP</div><h2>Support for the health<br/>you want to build.</h2></div><p>Every service starts with a detailed conversation and becomes a plan created specifically for you.</p></div>
-      <div className="services-bento">{services.map((service, i)=>{const Icon=service.icon;return <article className={service.tone} key={service.title}><div className="service-top"><span><Icon size={25}/></span><small>0{i+1}</small></div><h3>{service.title}</h3><p>{service.text}</p></article>})}</div>
-    </section>
+      <section className="services section-pad" id="services">
+        <div className="services-heading">
+          <div>
+            <div className="section-label light"><span>02</span> Areas of care</div>
+            <h2>Support designed around <em>your whole life.</em></h2>
+          </div>
+          <p>No two bodies or routines are the same. Each programme begins with a detailed conversation and becomes a plan built around you.</p>
+        </div>
+        <div className="service-list">
+          {services.map((service) => {
+            const Icon = service.icon;
+            return (
+              <article key={service.number}>
+                <div className="service-image"><img src={service.image} alt="" loading="lazy" /></div>
+                <span className="service-number">{service.number}</span>
+                <span className="service-icon"><Icon size={20} /></span>
+                <h3>{service.title}</h3>
+                <p>{service.text}</p>
+                <ArrowUpRight className="service-arrow" size={19} />
+              </article>
+            );
+          })}
+        </div>
+      </section>
 
-    <section className="video-story section" aria-labelledby="video-story-title">
-      <div className="video-shell">
-        <div className="video-copy"><div className="kicker">NUTRITION IN MOTION</div><h2 id="video-story-title">Healthy living should feel<br/><em>beautifully possible.</em></h2><p>See the Nourish philosophy come to life: colourful food, personal guidance and small habits designed for real days.</p><div className="video-points"><span><Check size={14}/> Familiar food</span><span><Check size={14}/> Personal care</span><span><Check size={14}/> Sustainable progress</span></div></div>
-        <div className="video-frame">
-          <video autoPlay muted loop playsInline preload="metadata" poster="/nourish-hero-premium.png" aria-label="Animated Nourish by Vaishali nutrition story">
-            <source src="/nourish-story.mp4" type="video/mp4"/>
+      <section className="process section-pad" id="process">
+        <div className="process-visual">
+          <video autoPlay muted loop playsInline preload="metadata" poster="/nourish-hero-premium.png" aria-label="Colourful, balanced food and nutrition">
+            <source src="/nourish-story.mp4" type="video/mp4" />
           </video>
-          <span className="video-label"><Play size={13} fill="currentColor"/> NOURISH IN MOTION</span>
+          <div className="visual-note"><Leaf size={16} /> A plan that moves with you</div>
         </div>
-      </div>
-    </section>
+        <div className="process-copy">
+          <div className="section-label"><span>03</span> Your journey</div>
+          <h2>Clear steps.<br /><em>Calm progress.</em></h2>
+          <p className="process-intro">A simple process that replaces confusion with clarity and gives you support without overwhelm.</p>
+          <ol>
+            {steps.map(([title, text], index) => (
+              <li key={title}>
+                <span>0{index + 1}</span>
+                <div><h3>{title}</h3><p>{text}</p></div>
+              </li>
+            ))}
+          </ol>
+        </div>
+      </section>
 
-    <section className="difference section">
-      <div className="difference-card">
-        <div className="difference-copy"><div className="kicker light">MORE THAN A MEAL PLAN</div><h2>Imagine feeling<br/><em>better in your day.</em></h2><p>The right nutrition plan should change how life feels—not just what appears on your plate.</p></div>
-        <div className="outcome-cloud"><span><i><Sun size={15}/></i> Steadier energy</span><span><i><Heart size={15}/></i> Food confidence</span><span><i><Waves size={15}/></i> Calmer digestion</span><span><i><TrendingUp size={15}/></i> Sustainable habits</span><span><i><Sprout size={15}/></i> Better routines</span></div>
-      </div>
-    </section>
+      <section className="about section-pad" id="about">
+        <div className="about-photo">
+          <img src="/vaishali-portrait.png" alt="Vaishali, nutrition and wellness consultant" loading="lazy" />
+          <span><Sparkles size={14} /> Your nutrition guide</span>
+        </div>
+        <div className="about-copy">
+          <div className="section-label light"><span>04</span> Meet Vaishali</div>
+          <h2>Warm guidance.<br /><em>Real understanding.</em></h2>
+          <p>Vaishali brings curiosity, empathy and practical thinking to every consultation. She listens closely, respects your food culture and helps turn healthy intentions into routines you can actually live with.</p>
+          <div className="about-values">
+            <span><Check size={14} /> Judgement-free</span>
+            <span><Check size={14} /> Food-first</span>
+            <span><Check size={14} /> Personally guided</span>
+          </div>
+          <blockquote>
+            <Quote size={21} />
+            “The best plan is not the strictest one. It is the one that helps you feel better and still feels like your life.”
+          </blockquote>
+        </div>
+      </section>
 
-    <section className="journey" id="journey">
-      <div className="journey-inner">
-        <div className="journey-copy"><div className="kicker light">03 / YOUR JOURNEY</div><h2>From confused to<br/><em>confident.</em></h2><p>A simple, supportive process that gives you clarity without overwhelming you.</p><a className="cta cta-white" href="#contact">Start your journey <b><ArrowDown size={16}/></b></a></div>
-        <ol><li><span>1</span><div><b>Connect</b><p>Send one WhatsApp message to share your goals and choose the right consultation.</p></div></li><li><span>2</span><div><b>Understand</b><p>We explore your health history, routine, preferences and challenges.</p></div></li><li><span>3</span><div><b>Personalise</b><p>Receive a clear food and lifestyle roadmap made around your real life.</p></div></li><li><span>4</span><div><b>Grow</b><p>Get follow-up support, practical adjustments and steady accountability.</p></div></li></ol>
-      </div>
-    </section>
-
-    <section className="contact-band section" id="contact">
-      <div><div className="kicker">TAKE THE FIRST STEP</div><h2>Let’s make healthy eating<br/><em>feel simple again.</em></h2></div>
-      <div className="contact-options booking-contact"><a href="tel:+918003924522"><span><PhoneCall size={19}/></span><div><small>CALL DIRECTLY</small><b>+91 80039 24522</b></div><i><ArrowRight size={18}/></i></a><a className="wa" href={whatsapp} target="_blank" rel="noreferrer"><span><MessageCircle size={19}/></span><div><small>WHATSAPP</small><b>Message Vaishali</b></div><i><ArrowUpRight size={18}/></i></a></div>
-    </section>
-
-    <section className="feedback section" id="feedback" aria-labelledby="feedback-title">
-      <div className="feedback-shell">
-        <div className="feedback-copy"><div className="kicker light">04 / COMMUNITY FEEDBACK</div><h2 id="feedback-title">Your experience<br/><em>helps care grow.</em></h2><p>Have a suggestion, question or kind word? Share it directly with Vaishali. Every message is read privately and helps make the experience better.</p><div className="feedback-trust"><span><Check size={13}/> No account needed</span><span><Check size={13}/> Private WhatsApp message</span></div></div>
+      <section className="feedback section-pad" id="feedback">
+        <div className="feedback-intro">
+          <div className="section-label"><span>05</span> Community</div>
+          <h2>Your experience helps <em>care grow.</em></h2>
+          <p>Questions, suggestions and feedback are always welcome. Your message goes privately to Vaishali through WhatsApp.</p>
+        </div>
         <form className="feedback-form" action="https://api.whatsapp.com/send" method="get" target="_blank">
-          <input type="hidden" name="phone" value="918003924522"/>
-          <label htmlFor="feedback-message">Write your feedback</label>
-          <textarea id="feedback-message" name="text" minLength={10} required placeholder="Hello Vaishali, I would like to share my feedback…"/>
-          <button type="submit">Send feedback on WhatsApp <ArrowUpRight size={17}/></button>
-          <small>Your feedback opens in WhatsApp so you can review it before sending.</small>
+          <input type="hidden" name="phone" value="918003924522" />
+          <label htmlFor="feedback-message">Share a thought</label>
+          <textarea id="feedback-message" name="text" required minLength={10} placeholder="Hello Vaishali, I would like to share…" />
+          <button type="submit">Send private feedback <ArrowUpRight size={17} /></button>
+          <small>You can review your message in WhatsApp before sending.</small>
         </form>
-      </div>
-    </section>
+      </section>
 
-    <section className="faq-new section" id="faq"><div><div className="kicker">05 / FAQs</div><h2>A few things<br/>you may wonder.</h2></div><div className="faq-list"><details open><summary>Are consultations available online?</summary><p>Yes. You can connect privately from wherever you are, with follow-up guidance designed for your routine.</p></details><details><summary>Will I need to stop eating my favourite foods?</summary><p>No. The plan uses familiar foods and flexible portions so it is realistic enough to continue.</p></details><details><summary>How do I book my first consultation?</summary><p>Use the call or WhatsApp choice in the booking section. Vaishali will help you choose the most suitable next step.</p></details></div></section>
+      <section className="faq section-pad">
+        <div>
+          <div className="section-label"><span>06</span> Good to know</div>
+          <h2>Questions before<br />you begin.</h2>
+        </div>
+        <div className="faq-list">
+          <details open>
+            <summary>Are consultations available online?<span><ArrowDown size={17} /></span></summary>
+            <p>Yes. You can connect privately from wherever you are, with follow-up guidance designed for your routine.</p>
+          </details>
+          <details>
+            <summary>Will I have to stop eating my favourite foods?<span><ArrowDown size={17} /></span></summary>
+            <p>No. Your plan uses familiar foods and flexible portions so it is realistic enough to continue.</p>
+          </details>
+          <details>
+            <summary>What happens in the first consultation?<span><ArrowDown size={17} /></span></summary>
+            <p>Vaishali explores your goals, health history, routine and preferences before recommending the right next step.</p>
+          </details>
+        </div>
+      </section>
 
-    <footer><div className="footer-main"><a className="logo footer-logo" href="#home"><span>V</span><div><b>NOURISH</b><small>by Vaishali</small></div></a><p>Personal nutrition care for real life.</p><div className="footer-links"><a href="#services">Explore services</a><a href="#contact">Book consultation <ArrowUpRight size={12}/></a></div></div><div className="footer-bottom"><span>© 2026 Nourish by Vaishali</span><a href="#home">Back to top <ArrowUp size={12}/></a></div></footer>
-  </main>
+      <section className="contact section-pad" id="contact">
+        <div className="contact-copy">
+          <div className="section-label light"><span>07</span> Start here</div>
+          <h2>Ready for food to feel <em>simpler?</em></h2>
+          <p>Choose the way you would like to connect with Vaishali.</p>
+        </div>
+        <div className="contact-options">
+          <a href="tel:+918003924522">
+            <span><Phone size={20} /></span>
+            <div><small>DIRECT PHONE CALL</small><b>+91 80039 24522</b></div>
+            <ArrowRight size={20} />
+          </a>
+          <a className="whatsapp" href={whatsapp} target="_blank" rel="noreferrer">
+            <span><MessageCircle size={20} /></span>
+            <div><small>WHATSAPP</small><b>Message Vaishali</b></div>
+            <ArrowUpRight size={20} />
+          </a>
+        </div>
+      </section>
+
+      <footer>
+        <div className="footer-top">
+          <a className="brand footer-brand" href="#home">
+            <span className="brand-mark">V</span>
+            <span><b>Nourish</b><small>by Vaishali</small></span>
+          </a>
+          <p>Personal nutrition care for real life.</p>
+          <a href="#home">Back to top <ArrowUp size={14} /></a>
+        </div>
+        <div className="footer-bottom">
+          <span>© 2026 Nourish by Vaishali</span>
+          <span>Personal · practical · possible</span>
+        </div>
+      </footer>
+    </main>
+  );
 }
