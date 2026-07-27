@@ -1,4 +1,5 @@
 import { Apple, ArrowDown, ArrowRight, ArrowUp, ArrowUpRight, Check, ClipboardCheck, Ear, Heart, HeartPulse, Leaf, MessageCircle, PhoneCall, Play, Scale, ShieldCheck, Sprout, Sun, TrendingUp, Waves } from "lucide-react";
+import ImmersiveHero from "./ImmersiveHero";
 
 const whatsapp = "https://wa.me/918003924522?text=Hello%20Vaishali%2C%20I%20would%20like%20to%20book%20a%20nutrition%20consultation.";
 
@@ -19,27 +20,7 @@ export default function Home() {
       </div>
     </header>
 
-    <section className="fan-hero" id="home" aria-labelledby="fan-hero-title">
-      <div className="grain" aria-hidden="true"></div>
-      <p className="fan-eyebrow"><span></span> Personal nutrition by Vaishali</p>
-      <h1 className="fan-title" id="fan-hero-title"><span>Small</span> <span>steps,</span></h1>
-      <div className="fan-ghost" aria-hidden="true"><span>big</span> <span>change.</span></div>
-
-      <div className="fan-stage" aria-label="A gallery of nourishing food and personal care">
-        <figure className="fan-card fan-card-1"><img src="/hero-goal-new.jpg" alt="A colourful balanced meal"/><figcaption>Balanced</figcaption></figure>
-        <figure className="fan-card fan-card-2"><img src="/hero-roadmap-new.jpg" alt="A personal nutrition roadmap"/><figcaption>Personal</figcaption></figure>
-        <figure className="fan-card fan-card-3"><img src="/vaishali-portrait.png" alt="Vaishali, nutrition consultant"/><figcaption>Supported</figcaption></figure>
-        <figure className="fan-card fan-card-4"><img src="/hero-real-life-desktop.jpg" alt="Preparing a fresh meal in a real kitchen"/><figcaption>Real life</figcaption></figure>
-        <figure className="fan-card fan-card-5"><img src="/nourish-hero-premium.png" alt="Fresh nourishing ingredients"/><figcaption>Colourful</figcaption></figure>
-        <figure className="fan-card fan-card-6"><img src="/hero-goal-mobile.jpg" alt="An everyday healthy plate"/><figcaption>Practical</figcaption></figure>
-        <figure className="fan-card fan-card-7"><img src="/vaishali-portrait-professional.png" alt="Vaishali smiling warmly"/><figcaption>Together</figcaption></figure>
-      </div>
-
-      <div className="fan-subline">
-        <a className="fan-cta" href="#contact">Start your plan <span><ArrowUpRight size={15}/></span></a>
-        <p>Real Indian food. Clear guidance. Zero crash diets.</p>
-      </div>
-    </section>
+    <ImmersiveHero/>
 
     <section className="ticker" aria-label="Nutrition philosophy"><div><span>NO CRASH DIETS</span><i>✦</i><span>REAL INDIAN MEALS</span><i>✦</i><span>SCIENCE-BACKED CARE</span><i>✦</i><span>SMALL STEPS, LASTING CHANGE</span></div></section>
 

@@ -6,14 +6,14 @@ export const metadata: Metadata = {
   description: "Personalised, science-backed nutrition programmes for lasting health, energy and confidence.",
   metadataBase: new URL("https://akshoy-o.github.io/Nourish-by-Vaishali/"),
   openGraph: {
-    title: "Small steps, big change. | Nourish by Vaishali",
-    description: "Personal nutrition guidance built around Indian food and real life.",
-    images: [{ url: "og.png", width: 1734, height: 907, alt: "Nourish by Vaishali — Small steps, big change." }],
+    title: "Food that fits real life. | Nourish by Vaishali",
+    description: "Immersive, personal nutrition guidance built around Indian food and everyday life.",
+    images: [{ url: "og.png", width: 1733, height: 908, alt: "Nourish by Vaishali — Food that fits real life." }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Small steps, big change. | Nourish by Vaishali",
-    description: "Personal nutrition guidance built around Indian food and real life.",
+    title: "Food that fits real life. | Nourish by Vaishali",
+    description: "Immersive, personal nutrition guidance built around Indian food and everyday life.",
     images: ["og.png"],
   },
   icons: {
