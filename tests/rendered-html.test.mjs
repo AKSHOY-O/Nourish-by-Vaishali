@@ -34,9 +34,9 @@ test("server-renders the complete Nourish portfolio", async () => {
 
 test("includes responsive and reduced-motion styles", async () => {
   const css = await readFile(new URL("../app/globals.css", import.meta.url), "utf8");
-  assert.match(css, /@media \(max-width: 760px\)/);
-  assert.match(css, /prefers-reduced-motion: no-preference/);
+  assert.match(css, /@media \(max-width:\s*760px\)/);
+  assert.match(css, /prefers-reduced-motion:\s*no-preference/);
   assert.match(css, /\.service-list/);
   assert.match(css, /\.contact-options/);
-  assert.match(css, /\.hero-visual/);
+  assert.match(css, /\.hero-world/);
 });
