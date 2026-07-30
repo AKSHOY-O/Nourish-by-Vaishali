@@ -8,13 +8,13 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Food that fits real life. | Nourish by Vaishali",
     description: "Immersive, personal nutrition guidance built around Indian food and everyday life.",
-    images: [{ url: "og.png", width: 1733, height: 908, alt: "Nourish by Vaishali — Food that fits real life." }],
+    images: [{ url: "og-editorial.png", width: 1731, height: 909, alt: "Nourish by Vaishali — Food that fits your real life." }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Food that fits real life. | Nourish by Vaishali",
     description: "Immersive, personal nutrition guidance built around Indian food and everyday life.",
-    images: ["og.png"],
+    images: ["og-editorial.png"],
   },
   icons: {
     icon: "https://akshoy-o.github.io/Nourish-by-Vaishali/favicon.svg",
