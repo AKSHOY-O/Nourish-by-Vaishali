@@ -2,19 +2,19 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Nourish by Vaishali | Registered Dietitian & Nutritionist",
-  description: "Evidence-informed nutrition guidance translated into a practical strategy for your health, preferences and everyday routine.",
+  title: "Food that fits your real life. | Nourish by Vaishali",
+  description: "Balanced Indian food, evidence-informed guidance and a practical nutrition plan designed around your body, goals and everyday routine.",
   metadataBase: new URL("https://akshoy-o.github.io/Nourish-by-Vaishali/"),
   openGraph: {
-    title: "Clear nutrition. Confident choices. | Nourish by Vaishali",
-    description: "Professional, personalised nutrition guidance for better health and sustainable progress.",
-    images: [{ url: "og-professional.png", width: 1731, height: 909, alt: "Clear nutrition. Confident choices. — Nourish by Vaishali" }],
+    title: "Food that fits your real life. | Nourish by Vaishali",
+    description: "Balanced Indian food and practical, personalised nutrition guidance for sustainable progress.",
+    images: [{ url: "og-food-film.png", width: 1731, height: 908, alt: "A balanced Indian thali with the words Food that fits your real life — Nourish by Vaishali" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Clear nutrition. Confident choices. | Nourish by Vaishali",
-    description: "Professional, personalised nutrition guidance for better health and sustainable progress.",
-    images: ["og-professional.png"],
+    title: "Food that fits your real life. | Nourish by Vaishali",
+    description: "Balanced Indian food and practical, personalised nutrition guidance for sustainable progress.",
+    images: ["og-food-film.png"],
   },
   icons: {
     icon: "https://akshoy-o.github.io/Nourish-by-Vaishali/favicon.svg",

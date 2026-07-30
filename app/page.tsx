@@ -87,22 +87,25 @@ export default function Home() {
 
       <section className="home-hero" id="home" aria-labelledby="hero-title">
         <div className="hero-copy">
-          <p className="eyebrow"><span></span> Personal nutrition practice · Online</p>
-          <h1 id="hero-title"><span>Clear nutrition.</span><em>Confident choices.</em></h1>
-          <p className="hero-intro">Evidence-informed nutrition guidance translated into a practical strategy for your health, food preferences and everyday routine.</p>
+          <p className="eyebrow"><span></span> Nourish by Vaishali · Personal nutrition</p>
+          <h1 id="hero-title"><span>Food that fits</span><em>your real life.</em></h1>
+          <p className="hero-intro">Balanced Indian food, evidence-informed guidance and a practical plan designed around your body, goals and everyday routine.</p>
           <div className="hero-action">
             <a href="#contact">Request a consultation <ArrowUpRight size={16} /></a>
             <p><Check size={13} /> Private, personalised and built around you.</p>
           </div>
         </div>
 
-        <div className="hero-portrait">
+        <div className="hero-film">
           <figure>
-            <img src="/vaishali-portrait-professional.png" alt="Vaishali, nutrition and wellness consultant" />
+            <video autoPlay muted loop playsInline preload="metadata" poster="/signature-food-poster.jpg" aria-label="Balanced Indian ingredients moving together into a complete thali">
+              <source src="/signature-food-film.mp4" type="video/mp4" />
+            </video>
+            <img className="film-poster" src="/signature-food-poster.jpg" alt="A complete balanced Indian thali" />
           </figure>
-          <div className="portrait-label">
+          <div className="film-label">
             <span><Leaf size={15} /></span>
-            <div><small>Nutrition & wellness consultant</small><b>Vaishali</b></div>
+            <div><small>Vaishali&apos;s approach</small><b>Familiar food. Better balance.</b></div>
           </div>
         </div>
 
