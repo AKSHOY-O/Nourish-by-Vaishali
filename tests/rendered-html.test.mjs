@@ -22,10 +22,10 @@ test("server-renders the complete Nourish portfolio", async () => {
   const html = await response.text();
   assert.match(html, /<title>Nourish by Vaishali/);
   assert.match(html, /id="hero-title"/);
-  assert.match(html, /Food that fits/);
-  assert.match(html, /food-gathering\.mp4/);
+  assert.match(html, /Eat well/);
+  assert.match(html, /vaishali-portrait-professional\.png/);
   assert.match(html, /id="services"/);
-  assert.match(html, /id="process"/);
+  assert.match(html, /id="journey"/);
   assert.match(html, /id="about"/);
   assert.match(html, /id="contact"/);
   assert.match(html, /tel:\+918003924522/);
@@ -37,7 +37,7 @@ test("includes responsive and reduced-motion styles", async () => {
   const css = await readFile(new URL("../app/globals.css", import.meta.url), "utf8");
   assert.match(css, /@media\s*\(max-width:\s*760px\)/);
   assert.match(css, /prefers-reduced-motion:\s*no-preference/);
-  assert.match(css, /\.service-list/);
+  assert.match(css, /\.care-grid/);
   assert.match(css, /\.contact-options/);
-  assert.match(css, /\.hero-stage/);
+  assert.match(css, /\.hero-portrait/);
 });
