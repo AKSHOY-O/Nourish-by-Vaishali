@@ -86,15 +86,13 @@ export default function Home() {
       </header>
 
       <section className="home-hero" id="home" aria-labelledby="hero-title">
-        <div className="hero-orbit orbit-one" aria-hidden="true"></div>
-        <div className="hero-orbit orbit-two" aria-hidden="true"></div>
         <div className="hero-copy">
-          <p className="eyebrow"><span></span> Personal nutrition for real life</p>
-          <h1 id="hero-title"><span>Eat well.</span><em>Live fully.</em></h1>
-          <p className="hero-intro">Warm, science-informed nutrition guidance that respects your body, your culture and the life you actually live.</p>
+          <p className="eyebrow"><span></span> Personal nutrition practice · Online</p>
+          <h1 id="hero-title"><span>Clear nutrition.</span><em>Confident choices.</em></h1>
+          <p className="hero-intro">Evidence-informed nutrition guidance translated into a practical strategy for your health, food preferences and everyday routine.</p>
           <div className="hero-action">
-            <a href="#contact">Begin with a conversation <ArrowUpRight size={16} /></a>
-            <p><Check size={13} /> No pressure. Just a thoughtful first step.</p>
+            <a href="#contact">Request a consultation <ArrowUpRight size={16} /></a>
+            <p><Check size={13} /> Private, personalised and built around you.</p>
           </div>
         </div>
 
@@ -104,18 +102,14 @@ export default function Home() {
           </figure>
           <div className="portrait-label">
             <span><Leaf size={15} /></span>
-            <div><small>Your nutrition guide</small><b>Vaishali</b></div>
-          </div>
-          <div className="food-inset">
-            <img src="/hero-real-life-new.jpg" alt="A colourful balanced Indian meal being prepared" />
-            <span>Familiar food.<br />Better balance.</span>
+            <div><small>Nutrition & wellness consultant</small><b>Vaishali</b></div>
           </div>
         </div>
 
         <div className="hero-foot">
-          <span>Online consultations</span>
-          <span>Indian food friendly</span>
-          <a href="#approach">Discover the approach <ArrowDown size={13} /></a>
+          <span>Evidence-informed</span>
+          <span>Culturally aware</span>
+          <a href="#approach">View the practice approach <ArrowDown size={13} /></a>
         </div>
       </section>
 
@@ -123,8 +117,8 @@ export default function Home() {
         <div className="section-index">01 — The belief</div>
         <div className="belief-layout">
           <div>
-            <p className="eyebrow"><span></span> A kinder way forward</p>
-            <h2>Good nutrition should make life feel <em>bigger,</em> not smaller.</h2>
+            <p className="eyebrow"><span></span> A rigorous, realistic approach</p>
+            <h2>Nutrition care should be credible enough to trust—and <em>practical enough to follow.</em></h2>
           </div>
           <div className="belief-copy">
             <p>Food is health, culture, comfort and connection. Vaishali helps you care for your body without losing any of that.</p>
@@ -143,7 +137,7 @@ export default function Home() {
       <section className="care" id="services">
         <div className="care-head">
           <div className="section-index light">02 — Areas of care</div>
-          <h2>Support for the season of life you&apos;re in.</h2>
+          <h2>Focused support. Personal strategy.</h2>
           <p>Every programme begins with a detailed conversation and becomes a plan shaped around you.</p>
         </div>
         <div className="care-grid">
@@ -167,7 +161,7 @@ export default function Home() {
         </div>
         <div className="journey-copy">
           <div className="section-index">03 — How it works</div>
-          <h2>Less confusion.<br /><em>More clarity.</em></h2>
+          <h2>A clear process.<br /><em>Considered progress.</em></h2>
           <p className="journey-intro">A simple, human process that helps change feel steady rather than overwhelming.</p>
           <ol>
             {steps.map((step) => (
@@ -183,7 +177,7 @@ export default function Home() {
       <section className="about" id="about">
         <div className="about-copy">
           <div className="section-index light">04 — Meet Vaishali</div>
-          <h2>A good plan begins with being <em>heard.</em></h2>
+          <h2>Professional guidance, with <em>personal attention.</em></h2>
           <p>Vaishali brings empathy, curiosity and clear thinking to every consultation. She listens closely, respects your food culture and helps turn healthy intentions into routines you can genuinely live with.</p>
           <div className="values">
             <span><Check size={13} /> Judgement-free</span>
@@ -201,7 +195,7 @@ export default function Home() {
       <section className="outcomes">
         <div className="section-index">05 — What we&apos;re building</div>
         <div className="outcome-grid">
-          <h2>Progress you can feel in everyday life.</h2>
+          <h2>The standard behind every recommendation.</h2>
           <div><b>01</b><h3>Calmer choices</h3><p>Less second-guessing at meals and more trust in yourself.</p></div>
           <div><b>02</b><h3>Steadier energy</h3><p>Food patterns that support your work, family and wellbeing.</p></div>
           <div><b>03</b><h3>Lasting skills</h3><p>Knowledge and routines that remain useful beyond a meal plan.</p></div>
@@ -246,8 +240,8 @@ export default function Home() {
       <section className="contact" id="contact">
         <div className="contact-copy">
           <div className="section-index light">08 — Start here</div>
-          <h2>Ready for food to feel simpler?</h2>
-          <p>Choose the way you would like to connect with Vaishali.</p>
+          <h2>Request a consultation.</h2>
+          <p>Choose the most convenient way to connect with Vaishali.</p>
         </div>
         <div className="contact-options">
           <a href="tel:+918003924522">

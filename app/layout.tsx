@@ -3,18 +3,18 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: "Nourish by Vaishali | Registered Dietitian & Nutritionist",
-  description: "Warm, science-informed nutrition guidance that respects your body, your culture and the life you actually live.",
+  description: "Evidence-informed nutrition guidance translated into a practical strategy for your health, preferences and everyday routine.",
   metadataBase: new URL("https://akshoy-o.github.io/Nourish-by-Vaishali/"),
   openGraph: {
-    title: "Eat well. Live fully. | Nourish by Vaishali",
-    description: "Personal nutrition guidance for real life, built around Indian food and everyday routines.",
-    images: [{ url: "og-fresh.png", width: 1734, height: 907, alt: "Eat well. Live fully. — Nourish by Vaishali" }],
+    title: "Clear nutrition. Confident choices. | Nourish by Vaishali",
+    description: "Professional, personalised nutrition guidance for better health and sustainable progress.",
+    images: [{ url: "og-professional.png", width: 1731, height: 909, alt: "Clear nutrition. Confident choices. — Nourish by Vaishali" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Eat well. Live fully. | Nourish by Vaishali",
-    description: "Personal nutrition guidance for real life, built around Indian food and everyday routines.",
-    images: ["og-fresh.png"],
+    title: "Clear nutrition. Confident choices. | Nourish by Vaishali",
+    description: "Professional, personalised nutrition guidance for better health and sustainable progress.",
+    images: ["og-professional.png"],
   },
   icons: {
     icon: "https://akshoy-o.github.io/Nourish-by-Vaishali/favicon.svg",

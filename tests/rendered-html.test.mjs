@@ -22,7 +22,7 @@ test("server-renders the complete Nourish portfolio", async () => {
   const html = await response.text();
   assert.match(html, /<title>Nourish by Vaishali/);
   assert.match(html, /id="hero-title"/);
-  assert.match(html, /Eat well/);
+  assert.match(html, /Clear nutrition/);
   assert.match(html, /vaishali-portrait-professional\.png/);
   assert.match(html, /id="services"/);
   assert.match(html, /id="journey"/);
